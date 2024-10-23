@@ -142,6 +142,7 @@ h1{
 /*HORARIO Y NOTA*/
 .dere{
     text-align: center;
+    margin-left: 550px;
     background-color: rgba(76, 43, 226, 0.667);
     padding: 20px;
     margin-top: 20px;
