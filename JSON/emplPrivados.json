@@ -1,0 +1,22 @@
+[
+    {
+        "foto": "./IMG/doc2.jpg",
+        "nombre":"Antonio Ndong Nchama",
+        "especialidad":"Doctor",
+        "especialista en":"P",
+        "edad":"43 años",
+        "casos exitosos": "20",
+        "horario": "Lunes, Miércoles, Vierenes: 8:00-14:00h",
+        "sueldo":"23.000.000XFA"
+    },
+    {
+        "foto": "./IMG/doc1.jpg",
+        "nombre":"Ana Trini Maye",
+        "especialidad":"Doctora",
+        "especialista en":"P",
+        "edad":"23 años",
+        "casos exitosos": "20",
+        "horario": "Lunes, Miércoles, Vierenes: 8:00-14:00h",
+        "sueldo":"23.000.000XFA"
+    }
+]

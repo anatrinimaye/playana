@@ -1,0 +1,42 @@
+[
+    {
+        "foto": "./IMG/doc1.jpg",
+        "nombre":"Ana Trini Maye",
+        "especialidad":"Ontologia"
+    },
+    {
+        "foto": "./IMG/enfer1.jpg",
+        "nombre":"Arsenio Perez Yhoni",
+        "especialidad":"Obstetria"
+    },
+    {
+        "foto": "./IMG/doc2.jpg",
+        "nombre":"Antonio Ndong Nchama",
+        "especialidad":"Ortopedia"
+    },
+    {
+        "foto": "./IMG/enfer3.jpg",
+        "nombre":"Arsenio Perez Yhoni",
+        "especialidad":"Obstetria"
+    },
+    {
+        "foto": "./IMG/farma2.jpg",
+        "nombre":"Ana Trini Maye",
+        "especialidad":"Ontologia"
+    },
+    {
+        "foto": "./IMG/enfer1.jpg",
+        "nombre":"Arsenio Perez Yhoni",
+        "especialidad":"Obstetria"
+    },
+    {
+        "foto": "./IMG/doc2.jpg",
+        "nombre":"Antonio Ndong Nchama",
+        "especialidad":"Ortopedia"
+    },
+    {
+        "foto": "./IMG/enfer2.jpg",
+        "nombre":"Arsenio Perez Yhoni",
+        "especialidad":"Obstetria"
+    }
+]

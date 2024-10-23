@@ -1,0 +1,17 @@
+[
+    {
+        "nombre":"ODONTOLOGIA",
+        "foto":"./IMG/tarj3.jpg",
+        "descripcion":"La odontología es el diagnóstico, tratamiento y prevención de afecciones, trastornos y enfermedades de los dientes, las encías, la boca y la mandíbula. A menudo considerada necesaria para una salud oral completa, la odontología puede tener un impacto en la salud de todo el cuerpo humano"
+    },
+    {
+        "nombre":"ORTOPEDIA",
+        "foto":"./IMG/tarj4.jpg",
+        "descripcion":"La cirugía ortopédica es una rama de la cirugía que se refiere a desórdenes del aparato locomotor, de sus partes musculares, óseas o articulares y sus lesiones agudas. Es la especialidad médica que involucra el tratamiento del sistema musculoesquelético. Incluye sus huesos, articulaciones, ligamentos, tendones y músculos"
+    },
+    {
+        "nombre":"OBSTETRICIA",
+        "foto":"./IMG/tarj2.jpg",
+        "descripcion":"La obstetricia o tocología es la especialidad médica que se ocupa del embarazo, el parto y el puerperio, incluyendo las situaciones de riesgo que requieran de una intervención quirúrgica. Como especialidad médica la obstetricia es combinada con la ginecología bajo la disciplina conocida como obstetricia y ginecología"
+    }
+]

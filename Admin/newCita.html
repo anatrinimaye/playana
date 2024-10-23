@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Cita Orto</title>
+    <link rel="stylesheet" href="./CSS/all.css">
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/nuevaCita.css">
+
+</head>
+<body>
+    <!--HEADER-->
+    <div class=" header">
+        <!--Logo PLAyANA-->
+        <div class="logo">
+            <img src="./IMG/logoOro.jpg" alt="">
+        </div>
+        <!--Enlaces laterales izquierdos-->
+        <div class="enlaces">
+            <a id="btnvolver" href="./servicios.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            <a href="./index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="../PLAyANA/info.html"><i class="fa-solid fa-info"></i>nfo</a>
+        </div>
+        <!--Buscador-->
+        <div class="buscador">
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <!--Iconos de contactos-->
+        <div class="cont">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href=""><i class="fa-brands fa-tiktok"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram"></i></a>    
+        </div>
+        
+       
+        
+    </div>
+
+
+    <div class="cuerpo">
+        <form action="">
+            <div class="formul">
+                <h1 id="orto1"></h1>
+                <div class="creden">
+                    <div class="uno">
+                        <div class="numero">
+                            <i class="fa-solid fa-list-ol"></i>
+                            <input type="number" placeholder="numero"> 
+                        </div>
+                        <div class="nombre">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="nombre">
+                        </div>
+                        <div class="motivo" >
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="text" placeholder="motivo">
+                        </div>
+                    </div>
+                    <div class="dos">
+                        <div class="fecha">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <input type="datetime-local" placeholder="fecha">
+                        </div>
+                        <div class="proxCita">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <input type="datetime-local" placeholder="proxima cita">
+                        </div>
+                        <div class="doctor ">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <input type="text" placeholder="doctor">
+                        </div>
+                    </div>
+                   
+                    
+                    
+                </div>
+                <button id="btn"><a href="">GUARDAR</a></button>
+            </div>
+
+            
+        </form>
+    </div>
+
+
+
+
+    <script src="./js/newcitas.js"></script>
+</body>
+</html>

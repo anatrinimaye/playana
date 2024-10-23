@@ -1,0 +1,106 @@
+
+.inicio{
+    width: 100%;
+    height: auto;
+    
+}
+.doscajas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+/*Imagen */
+.nos{
+    margin-left: 70px;
+    margin-top: 50px;
+    width: 900px;
+    height: 450px;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgb(24, 24, 24);
+    background-color: rgba(43, 205, 226, 0.667);
+   
+    
+}
+.foto{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 250px;
+}
+.foto img{
+    width: 100%;
+    border-radius: 25px;
+   
+}
+.serYhora{ 
+    margin-top: 100px;
+    width: 700px;
+    text-align: center;
+}
+.serYhora h1{
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: cambria;
+    font-weight: bold;
+    color: white;
+    
+}
+.serYhora p{
+    font-size: 25px;
+    font-family: cambria;
+    font-weight: bold;
+}
+/*Horario y la Nota*/
+.dere{
+    text-align: center;
+    background-color: rgba(76, 43, 226, 0.667);
+    padding: 20px;
+    margin-top: 20px;
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgb(251, 251, 251);
+    
+}
+.horario h1{
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: cambria;
+    color: rgb(255, 255, 255); 
+}
+.horario p{
+    font-size: 25px;
+    font-family: cambria;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: rgba(1, 1, 1, 0.719);
+}
+#not{
+    background-color: brown;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: cambria;
+    
+}
+/*FOOTER*/
+.footer{
+    margin-left: 600px;
+}
+.footer p{
+    font-size: 20px;
+    font-family: cambria;
+    font-weight: bold;
+    color: white;
+    margin-top: 130px;
+}
+span{
+    font-weight: bold;
+    color: rgba(52, 219, 14, 0.711);
+    
+}
+
+
