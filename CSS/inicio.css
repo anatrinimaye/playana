@@ -104,7 +104,7 @@ h1{
     height: 430px;
     text-align: center;
     border-radius: 5%;
-    background-color: #a35656;
+    background-color: #ffffff;
 }
 /*Caja de la foto y el texto de los servicios*/
 .defin{
@@ -135,9 +135,69 @@ h1{
     
 }
 
+/*DOCTORES*/
+.doctores{
+    width: 1000px;
+    height: auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 50px 0px 50px 400px;
+    text-align: center;
+    padding: 10px;
+    
+}
+.doc{
+    width: 250px;
+    height: 300px;
+    transition: 1s;
+    border-radius: 53px;
+    background-color: rgb(255, 255, 255);
 
-
-
+}
+.doc .foto{
+    width: 100%;
+    height: 190px;
+    border-radius: 50px 50px 0px 0px;
+    margin-bottom: 10px;
+    background-color: rgb(18, 111, 27);
+}
+.doc .foto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px 50px 0px 0px;
+}
+.doc:hover{
+        background-color: rgba(43, 205, 226, 0.667);
+        transform: scale(1.05);
+        cursor: pointer;
+        .nom span{
+            color: rgb(144, 52, 52);
+        }
+        .nom p, .iconos i {
+            color: rgb(1, 1, 1);
+        }
+}
+.doc .nom p{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-family: cambria;
+    font-size: 18px;
+}
+.doc .nom span{
+    font-weight: bold;
+    color: orangered;
+    font-family: cambria;
+    font-size: 18px;
+}
+.doc .iconos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color:rgb(67, 42, 42);
+    gap: 20px;
+}
 
 /*HORARIO Y NOTA*/
 .dere{
@@ -146,6 +206,7 @@ h1{
     background-color: rgba(76, 43, 226, 0.667);
     padding: 20px;
     margin-top: 20px;
+    margin-bottom: 50px;
     width: 600px;
     height: auto;
     border-radius: 10px;
@@ -173,6 +234,42 @@ h1{
     font-weight: bold;
     border-radius: 5px;
     font-family: cambria;
+    
+}
+
+/*FOOTER*/
+.footer{
+    width: 100%;
+    height: 100px;
+    
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    background-color: rgb(15, 113, 149);
+}
+.cont .icon{
+    display: flex;
+    gap: 40px;
+}
+.cont .icon a, i{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    text-shadow: 1px 0px 0px rgba(125, 118, 118, 0.95);
+}
+.txt p{
+    font-size: 20px;
+    font-family: calibri;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+}
+.txt span{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
     
 }
 

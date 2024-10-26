@@ -2,12 +2,12 @@
     {
         "foto": "./IMG/doc1.jpg",
         "nombre":"Ana Trini Maye",
-        "especialidad":"Ontologia"
+        "especialidad":"Odontologia"
     },
     {
         "foto": "./IMG/enfer1.jpg",
         "nombre":"Arsenio Perez Yhoni",
-        "especialidad":"Obstetria"
+        "especialidad":"Obstetricia"
     },
     {
         "foto": "./IMG/doc2.jpg",
@@ -16,27 +16,17 @@
     },
     {
         "foto": "./IMG/enfer3.jpg",
-        "nombre":"Arsenio Perez Yhoni",
-        "especialidad":"Obstetria"
+        "nombre":"Tarsicio Santander",
+        "especialidad":"Obstetricia"
     },
     {
         "foto": "./IMG/farma2.jpg",
-        "nombre":"Ana Trini Maye",
-        "especialidad":"Ontologia"
-    },
-    {
-        "foto": "./IMG/enfer1.jpg",
-        "nombre":"Arsenio Perez Yhoni",
-        "especialidad":"Obstetria"
-    },
-    {
-        "foto": "./IMG/doc2.jpg",
-        "nombre":"Antonio Ndong Nchama",
-        "especialidad":"Ortopedia"
+        "nombre":"Trinidad Maye",
+        "especialidad":"Odontologia"
     },
     {
         "foto": "./IMG/enfer2.jpg",
-        "nombre":"Arsenio Perez Yhoni",
-        "especialidad":"Obstetria"
+        "nombre":"Teresa Laura Mbang",
+        "especialidad":"Ortopedia"
     }
 ]
