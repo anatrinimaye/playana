@@ -18,7 +18,7 @@
         <div class="enlaces">
             <a href="./formservis.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
             <a href="./index.html"><i class="fa-solid fa-house"></i>Inicio</a>
-            <a href="./citOnto.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
+            <a href="./citOdon.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
             <a href="./newCita.html"><i class="fa-solid fa-file-pen"></i> Nueva cita</a>
         </div>
         
