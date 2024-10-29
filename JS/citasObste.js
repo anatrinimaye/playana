@@ -63,7 +63,7 @@
         }
     }
 
-    obj1.open("GET", "./JSON/obstetria.json")
+    obj1.open("GET", "../JSON/obstetria.json")
     obj1.send();
 
 

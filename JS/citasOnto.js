@@ -64,7 +64,7 @@
         }
     }
 
-    obj1.open("GET", "./JSON/ontologia.json")
+    obj1.open("GET", "../JSON/ontologia.json")
     obj1.send();
 
 

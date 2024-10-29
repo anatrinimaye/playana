@@ -63,7 +63,7 @@
         }
     }
 
-    obj1.open("GET", "./JSON/Ortopedia.json")
+    obj1.open("GET", "../JSON/Ortopedia.json")
     obj1.send();
 
 

@@ -16,10 +16,10 @@
         </div>
         
         <div class="enlaces">
-            <a href="./formsDoct.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            <a href="./formDoct.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
             <a href="./index.html"><i class="fa-solid fa-house"></i>Inicio</a>
             <a href="./Admin/citOdon.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
-            <a href="./newCita.html"><i class="fa-solid fa-file-pen"></i> Nueva cita</a>
+            <a href="./Admin/newCita.html"><i class="fa-solid fa-file-pen"></i> Nueva cita</a>
         </div>
         
         <div class="buscador">
@@ -99,10 +99,10 @@ const ortopedia=`
         </div>
         <!--Enlaces laterales izquierdos-->
         <div class="enlaces">
-            <a href="./formsDoct.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            <a href="./formDoct.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
             <a href="./index.html"><i class="fa-solid fa-house"></i> Inicio</a>
             <a href="./Admin/citOrto.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
-            <a href="./newCita.html"><i class="fa-solid fa-file-pen"></i> Nueva cita</a>
+            <a href="./Admin/newCita.html"><i class="fa-solid fa-file-pen"></i> Nueva cita</a>
             
         </div>
         <!--Buscador-->
@@ -184,7 +184,7 @@ const obstetria=`
             <a href="./formDoct.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
             <a href="./index.html"><i class="fa-solid fa-house"></i> Inicio</a>
             <a href="./Admin/citObste.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
-            <a href="./newCita.html"><i class="fa-solid fa-file-pen"></i> Nueva cita</a>
+            <a href="../Admin/newCita.html"><i class="fa-solid fa-file-pen"></i> Nueva cita</a>
         </div>
         
         
