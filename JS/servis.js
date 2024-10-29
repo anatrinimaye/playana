@@ -16,9 +16,9 @@
         </div>
         
         <div class="enlaces">
-            <a href="./formservis.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            <a href="./formsDoct.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
             <a href="./index.html"><i class="fa-solid fa-house"></i>Inicio</a>
-            <a href="./citOdon.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
+            <a href="./Admin/citOdon.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
             <a href="./newCita.html"><i class="fa-solid fa-file-pen"></i> Nueva cita</a>
         </div>
         
@@ -29,7 +29,7 @@
             </div>
         </div>
        
-        <div class="cont">
+        <div class="con">
             <a href=""><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
             <a href=""><i class="fa-brands fa-tiktok"></i></a>
@@ -99,9 +99,9 @@ const ortopedia=`
         </div>
         <!--Enlaces laterales izquierdos-->
         <div class="enlaces">
-            <a href="./formservis.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            <a href="./formsDoct.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
             <a href="./index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-            <a href="./citOrto.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
+            <a href="./Admin/citOrto.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
             <a href="./newCita.html"><i class="fa-solid fa-file-pen"></i> Nueva cita</a>
             
         </div>
@@ -113,7 +113,7 @@ const ortopedia=`
             </div>
         </div>
         <!--Iconos de contactos-->
-        <div class="cont">
+        <div class="con">
             <a href=""><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
             <a href=""><i class="fa-brands fa-tiktok"></i></a>
@@ -181,9 +181,9 @@ const obstetria=`
         </div>
         
         <div class="enlaces">
-            <a href="./formservis.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            <a href="./formDoct.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
             <a href="./index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-            <a href="./citObste.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
+            <a href="./Admin/citObste.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
             <a href="./newCita.html"><i class="fa-solid fa-file-pen"></i> Nueva cita</a>
         </div>
         
@@ -195,7 +195,7 @@ const obstetria=`
             </div>
         </div>
         
-        <div class="cont">
+        <div class="con">
             <a href=""><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
             <a href=""><i class="fa-brands fa-tiktok"></i></a>

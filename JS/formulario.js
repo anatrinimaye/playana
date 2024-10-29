@@ -25,7 +25,7 @@
     function acceder(){
         let nombre=document.getElementById("nombre").value;
         let contra=document.getElementById("contra").value;
-        let radOrto=document.getElementById("label input:checked").value;
+        //let radOrto=document.getElementById("label input:checked").value;
 
     if((nombre== " " || nombre.length == 0) || (contra == " " || contra.length == 0)){
         alert("DEBES RELLENAR AMBOS CAMPOS");
@@ -51,7 +51,7 @@
         localStorage.removeItem("odon");
         window.location="servicios.html";
     }
-    else if((nombre !== "onotologia" && contra !=="onto1234")||(nombre !== "ortopedia" && contra !=="orto1234")||(nombre !== "obstetria" && contra !=="obste1234")){
+    else if((nombre !== "doctor" && contra !=="onto1234")||(nombre !== "doctor" && contra !=="orto1234")||(nombre !== "doctor" && contra !=="obste1234")){
         alert("DATOS INCORRECTOS");
     }
 }
