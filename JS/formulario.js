@@ -25,7 +25,7 @@
     function acceder(){
         let nombre=document.getElementById("nombre").value;
         let contra=document.getElementById("contra").value;
-        //let radOrto=document.getElementById("label input:checked").value;
+        let radOrto=document.getElementById("label input:checked");
 
     if((nombre== " " || nombre.length == 0) || (contra == " " || contra.length == 0)){
         alert("DEBES RELLENAR AMBOS CAMPOS");
@@ -38,7 +38,7 @@
         window.location="servicios.html";
     }
     //Credenciales del servicio ortopedia
-    else if(nombre === "doctor" && contra ==="orto1234"){
+    else if(nombre === "doctor" && contra ==="orto1234" && radOrto.isCheck){
         localStorage.setItem("orto","ortopedia");
         localStorage.removeItem("odon");
         localStorage.removeItem("obste");
