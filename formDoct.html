@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Servicios</title>
-    <link rel="stylesheet" href="./CSS/all.css">
-    <link rel="stylesheet" href="./CSS/all.min.css">
-    <link rel="stylesheet" href="./CSS/header.css">
     <link rel="stylesheet" href="./CSS/formservis.css">
 </head>
 <body>
@@ -39,11 +36,15 @@
     </div>
 
 
-
     <!--CUERPO-->
     <div class="cuerpo">
-        <form action="">
+        <form action=" ">
+            <div class="error">
+                <p class="datInc" id="datInc"> DATOS INCORRECTOS </p> 
+            </div>
+            
             <div class="formul">
+                
                 <p id="perfil"><i class="fa-solid fa-circle-user"></i></p>
                 <div class="creden">
                     <div class="nom">
@@ -53,21 +54,24 @@
                     <div class="contra">
                         <i class="fa-solid fa-lock"></i>
                         <input type="password" id="contra" placeholder="Contraseña"  />
+                        <p class="Vacio" id="campVacio">Debes introducir la contraseña y el nombre del usuario</p>
                     </div>
+                    
                     <div class="opcion">
                         <div>
-                            <input type="radio" id="radOdon" name="rad"> <label for=""> Odontologia</label>
-                            <input type="radio" id="radObs" name="rad"> <label for=""> Obstetricia</label>
-                            <input type="radio" id="radOrt" name="rad"> <label for=""> Ortopedia</label>
+                            <input type="radio" id="radOdon" name="rad"> <label> Odontologia</label>
+                            <input type="radio" id="radObs" name="rad"> <label> Obstetricia</label>
+                            <input type="radio" id="radOrt" name="rad"> <label> Ortopedia</label>
+                            <p class="opcEspe" id="opcEspe">Debes elegir la especialidad</p>
                         </div>
                     </div>
                 </div>
-                
             </div>
 
             <div onclick="acceder()">
                 <input id="btn" type="button" value="ACCEDER" />
             </div>
+
         </form>
     </div>
 

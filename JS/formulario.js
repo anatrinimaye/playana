@@ -2,6 +2,7 @@
 
 
     //FUNCION PARA EL FORMULARIO DEL SISTEMA
+
     function entrar(){
         let nombre=document.getElementById("nombre").value;
         let contra=document.getElementById("contra").value;
@@ -21,37 +22,59 @@
         alert("DATOS INCORRECTOS");
     }
 }
-    //FUNCION PARA EL FORMULARIO DEL SISTEMA
+   //DOCTORES
     function acceder(){
         let nombre=document.getElementById("nombre").value;
         let contra=document.getElementById("contra").value;
-        let radOrto=document.getElementById("label input:checked");
-
+        let radOdon=document.getElementById("radOdon").checked;
+        let radObste=document.getElementById("radObs").checked;
+        let radOrto=document.getElementById("radOrt").checked;
+    
+        //No se puede dejar campos vacios
     if((nombre== " " || nombre.length == 0) || (contra == " " || contra.length == 0)){
-        alert("DEBES RELLENAR AMBOS CAMPOS");
+        document.getElementById("campVacio").classList.add("Vacio");
+        //alert("DEBES PROPORCIONAR TODOS LOS DATOS");
+        
     }
+    else if( (radOdon === false && radObste === false && radOrto === false)){
+        
+   }
+    
     //Credenciales del servicio de odontologia
-    else if(nombre === "doctor" && contra ==="odon1234"){
+    else if(nombre === "doctor" && contra ==="odon1234" && radOdon === true){
         localStorage.setItem("odon","odontologia");
         localStorage.removeItem("orto");
         localStorage.removeItem("obste");
         window.location="servicios.html";
+        
     }
     //Credenciales del servicio ortopedia
-    else if(nombre === "doctor" && contra ==="orto1234" && radOrto.isCheck){
+    else if(nombre === "doctor" && contra ==="orto1234" && radOrto === true){
         localStorage.setItem("orto","ortopedia");
         localStorage.removeItem("odon");
         localStorage.removeItem("obste");
         window.location="servicios.html";
     }
-    //Credenciales del servicio obstetria
-    else if(nombre === "doctor" && contra ==="obste1234"){
+    //Credenciales del servicio obstetricia
+    else if(nombre === "doctor" && contra ==="obste1234" && radObste === true){
         localStorage.setItem("obste","obstetria");
         localStorage.removeItem("orto");
         localStorage.removeItem("odon");
         window.location="servicios.html";
     }
-    else if((nombre !== "doctor" && contra !=="onto1234")||(nombre !== "doctor" && contra !=="orto1234")||(nombre !== "doctor" && contra !=="obste1234")){
+    else if((nombre !== "doctor" || contra !=="onto1234" || radOdon === true)
+        ||(nombre !== "doctor" || contra !=="orto1234" || radOrto === true)
+        ||(nombre !== "doctor" || contra !=="obste1234" ||  radObste === true)){
         alert("DATOS INCORRECTOS");
     }
+
+
+    /*let form = document.querySelector('form');
+
+    document.addEventListener('click', e=>{
+
+    if (form.rad) {
+        console.log(form.rad)
+    }
+    })*/
 }

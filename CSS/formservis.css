@@ -1,4 +1,8 @@
 
+@import url(./header.css);
+@import url(./all.min.css);
+@import url(./all.min.css);
+
 .cuerpo{
     background-size: cover;
     background-position: center center;
@@ -60,12 +64,57 @@
 .opcion input[type="radio"]{
     margin-left: 10px;
     cursor: pointer;
-    background-color: #b43939;
+    color: black;
     
 }
 .opcion label{
     font-size: 20px;
 }
+.error {
+    display: none;
+}
+.error p.datInc{
+    background-color: #de0d0dd8;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: cambria;
+    font-weight: 20;
+    display: block;
+}
+.error{
+    width: 290px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    
+}
+.contra p{
+    display: none;
+}
+.contra p.Vacio{
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #a00d0de4;
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: cambria;
+    width: 370px;
+    font-size: 15px;
+    display: block;
+}
+
+.opcion p.opcEspe{
+    background-color: #a00d0de4;
+    width: 270px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 70px;
+    font-size: 16px;
+    display: block;
+}
+
 
 #btn{
     width: 200px;
