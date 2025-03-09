@@ -2,13 +2,24 @@
 /*BANNER*/
 .eslo{
     width: 100%;
-    height: 500px;
+    height: 680px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.60)),url(../IMG/fondo3.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.648), rgba(0, 0, 0, 0.675)),url(../IMG/fondo3.jpg);
     text-align: center;
+    position: sticky;
     margin-bottom: 40px;
+    .iconBanner{
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        i{
+            font-size: 100px;
+            color: white;
+        }
+    }
+    
 }
 
 .eslo h1{
@@ -39,6 +50,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.355)),url(../IMG/fondo1.jpg);
     .horari{
        justify-content: space-between;
@@ -54,7 +66,7 @@
        }
       
        .h3, .festi{
-        color: rgb(199, 104, 1);
+        color: rgb(234, 121, 0);
         text-align: center;
        }
        .cont{
@@ -62,4 +74,119 @@
         font-weight: bold;
        }
     }
+}
+
+
+/* SERVICIOS */
+.cajaServicios{
+    .servicios{
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+        font-family: cambria;
+        
+        
+        .servicio{
+            width: 250px;
+            /* background-color: #4f585a15; */
+            height: auto;
+            padding: 20px;
+            box-shadow: 0px 0px 1px black;
+            h6{
+                margin-top: 20px;
+                margin-bottom: 30px;
+                color: black;
+                font-weight: 550;
+
+            }
+            .titul{
+                padding-left: 5px;
+            }
+            .cajaBtn{
+                justify-content:center;
+                a{
+                    text-decoration: none;
+                    color: rgb(2, 2, 118);
+                    font-weight: 550;
+                }
+                a:hover{
+                    color: orangered;
+                    
+                    border-radius: 5px;
+                }
+            }
+        }
+
+    }
+}
+
+.cajaTestimonios{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.629), rgba(0, 0, 0, 0.601)),url(../IMG/ofta4.jpg);
+}
+
+
+
+/* SLIDER DE LOS TESTIMONIOS */
+.cajaGeneralSlider {
+    width: 700px;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    background-color: #2b2929f9;
+    /* color: black; */
+    box-shadow: 0px 1px 2px black;
+    
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.foto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 150px;
+    }
+    
+}
+.nombre{
+    
+        color: rgb(251, 167, 0);
+        font-weight: bolder;
+    
+}
+
+.btnAnterior, .btnSiguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btnAnterior {
+    left: 10px;
+}
+
+.btnSiguiente {
+    right: 10px;
+}
+
+.btnAnterior:hover, .btnSiguiente:hover{
+    background-color: #3f1515;
 }

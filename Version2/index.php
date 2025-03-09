@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="./css/inicio.css">
 </head>
 <body>
-    <?php
-        require("./componentes/header.php");
-    ?>
+    <div>
+        <?php
+            require("./componentes/header.php");
+        ?>
+    </div>
+    
        
         <!--BANNER-->
         <div class="container-fluit eslo banner">
@@ -20,15 +23,29 @@
             <div class="eslogan">
                 <h2>La salud no lo es todo pero sin ella, todo lo demas es nada</h2>
             </div>
+                    <div class="mt-5 d-flex container" >
+                        <div class="foto">
+                            <img src="./img/ofta1.jpg" style="width: 250px" class="card-img-top" alt="...">
+                        </div>
+                        <div class="foto">
+                            <img src="./img/ofta4.jpg" style="width: 250px" class="card-img-top" alt="...">
+                        </div>
+                        <div class="foto">
+                            <img src="./img/ofta5.jpeg" style="width: 250px" class="card-img-top" alt="...">
+                        </div>
+                        
+                    </div>
+            
+            
+   
         </div>
 
+        
+        <p class="mt-5 enunciados"> Nuestro Horario </p>
         <!-- HORARIO -->
         <div class="">
-            <!-- Texto de bienvenida -->
-            <p class="text-center h3"> Bienvenido a Nuestra Clinica</p>
-            <p class="text-center mb-5"> Ofrecemos amplios procedimientos médicos a pacientes entrantes y salientes.</p>
             <!-- Horario de Emergencia -->
-            <div class="horario d-flex container-fluid">
+            <div class="horario d-flex container-fluid mt-5">
                 <!-- Caja del Horario y de Emergencia  -->
                 <div class=" d-flex horari col-8 py-5 px-2">
                     <!-- Horario -->
@@ -63,25 +80,160 @@
             </div>
         </div>
 
-        <!-- SOBRE NOSOTROS -->
-         <div class="nosotros my-5">
-            <p class="text-center h3"> Sobre Nosotros</p> 
+         <!-- Texto de bienvenida para los servicios-->
+         <p class="mt-5 enunciados"> Nuestros Servicios</p>
+            <p class="text-center mb-5"> Ofrecemos amplios procedimientos médicos a pacientes entrantes y salientes.</p>
+
+            <!-- SERVICIOS -->
+             <div class="container-fluid cajaServicios ">
+                <div class="container d-flex servicios">
+                    
+                    <!-- Cada Caja -->
+                    <div class=" servicio">
+                        <div class="foto">
+                            <img src="./img/ofta5.jpeg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="">
+                            <h6 class="text-center">Tratamientos de enfermedades oculares</h6>
+                            <p class="titul"> 
+                                Lorem dolor sit amet sequi ducimus aliquam sequi ducimus?
+                            </p>
+                            <div class="cajaBtn d-flex">
+                                <a class="" href="">Leer Mas</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cada Caja -->
+                    <div class=" servicio">
+                        <div class="foto">
+                            <img src="./img/ofta1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="">
+                            <h6 class="text-center mb-3">Examenes y Diagnosticos de la vista</h6>
+                            <p class="titul">
+                                Lorem dolor sit amet sequi ducimus aliquam sequi ducimus?
+                            </p>
+                            <div class="cajaBtn d-flex ">
+                                <a class="" href="">Leer Mas</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cada Caja -->
+                    <div class=" servicio" >
+                        <div class="foto">
+                            <img src="./img/ofta4.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="">
+                            <h6 class="text-center mb-3">Correccion de Errores Refractorios</h6>
+                            <p class="titul">
+                                Lorem dolor sit amet sequi ducimus aliquam sequi ducimus sequi
+                            </p>
+                            <div class="cajaBtn d-flex">
+                                <a class="" href="">Leer Mas</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+      
+
+                </div>
+             </div>
+
+
+        <!-- TESTIMONIOS -->
+        
+        
+        <p class="mt-5 enunciados"> Lo Que Dicen Nuestros Clientes</p>
+        <p class="text-center mb-5"> Ofrecemos procedimientos médicos integrales para pacientes que ingresan y salen del país.</p>
+        
+        
+
+        <div class="cajaTestimonios py-5 d-flex justify-content-center bg-success">
+        <div class="cajaGeneralSlider">
+            <div class="slider">
+                <div class="slide">
+                <div class="foto">
+                        <img class="mt-3" src="./img/cli1.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="texto px-5 pt-3">
+                        <p class="px-5">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Qui obcaecati laborum vero consequuntur 
+                            atque aut unde modi commodi illum blanditiis 
+                            dolor velit exercitationem officiis odio delectus hic eveniet, ipsum minus.
+                        </p>
+                            
+                    </div>
+                    <p class="text-center py-3 nombre">Anastasia Trinidad</p>
+                </div>
+                <div class="slide">
+                    <div class="foto">
+                        <img class="mt-3" src="./img/cli2.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="texto px-5 pt-3">
+                    <p class="px-5">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Qui obcaecati laborum vero consequuntur 
+                            atque aut unde modi commodi illum blanditiis 
+                            dolor velit exercitationem officiis odio delectus hic eveniet, ipsum minus.
+                        </p>
+                    </div>
+                    <p class="text-center py-3 nombre">Ana Trini Maye</p>
+                </div>
+                <div class="slide">
+                    <div class="foto">
+                        <img class="mt-3" src="./img/cli3.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="texto px-5 pt-3">
+                    <p class="px-5">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Qui obcaecati laborum vero consequuntur 
+                            atque aut unde modi commodi illum blanditiis 
+                            dolor velit exercitationem officiis odio delectus hic eveniet, ipsum minus.
+                        </p>
+                    </div>
+                    <p class="text-center py-3 nombre">Placido Pablo</p>
+                </div>
+            </div>
+            <button class="btnAnterior"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="btnSiguiente"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        </div>
+
+
+   
+         <div>
+            <?php
+                require("./componentes/footer.php")
+            ?>
          </div>
-
-
-
-
     
-    
+         <!-- MI SCRIPT PARA EL CARRUSEL -->
+        <script>
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const btnAnterior = document.querySelector('.btnAnterior');
+            const btnSiguiente = document.querySelector('.btnSiguiente');
 
+            let counter = 0;
+            const slideWidth = slides[0].clientWidth;
 
+            btnSiguiente.addEventListener('click', () => {
+                if (counter >= slides.length - 1) return;
+                counter++;
+                slider.style.transform = `translateX(${-slideWidth * counter}px)`;
+            });
 
-
-
-
-
-
-
+            btnAnterior.addEventListener('click', () => {
+                if (counter <= 0) return;
+                counter--;
+                slider.style.transform = `translateX(${-slideWidth * counter}px)`;
+            });
+        </script>
 
 
 <script src="./js/bootstrap.min.js"></script>

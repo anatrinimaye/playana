@@ -1,0 +1,274 @@
+
+@import url(./bootstrap.min.css);
+@import url(./all.css);
+@import url(./all.min.css);
+
+/*ESLOGAN*/
+.eslo{
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.60)),url(../IMG/fondo3.jpg);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.eslo h1{
+    color: rgb(252, 252, 252);
+    padding-top: 80px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-family: cambria;
+    font-size: 45px;
+    text-shadow: 2px 2px 0px black;
+}
+.eslogan{
+    color:rgb(125, 11, 11);
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: bolder;
+    font-family: cursive;
+    font-size: 30px;
+    text-shadow: 1px 1px 0px rgb(11, 10, 10);
+}
+.todo{
+    width: 100%;
+    
+}
+
+/*SOBRE NOSOTROS*/
+h1{
+    text-align: center;
+    color: rgb(12, 12, 121);
+    font-family: cambria;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.nos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgb(24, 24, 24);
+    background-color: rgba(43, 205, 226, 0.667); 
+
+}
+/*Foto de sobre nosotros*/
+.nos .fot{
+    width: 300px;
+    height: 350px;
+}
+.nos .fot img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+   
+}
+/*Texto de Sobre Nosotros*/
+.text{ 
+    margin-top: 10px;
+    width: 700px;
+    text-align: justify;
+    font-family: cambria;
+    font-size: 18px;
+}
+
+
+/*SERVICIOS*/
+.servicios{
+    width: 90%;
+    height: 550px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 50px 30px 0px 30px;
+    background-color: #01ae46;
+}
+.servicios h3{
+    text-align: center;
+    color: orangered;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: cambria;
+}
+.caja{
+    width: 35%;
+    height: 430px;
+    text-align: center;
+    border-radius: 5%;
+    background-color: #ffffff;
+}
+/*Caja de la foto y el texto de los servicios*/
+.defin{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    gap: 20px;
+    padding: 20px 0px 0px 10px;
+    
+}
+/*caja de la foto de los servicios*/
+.defin .foto{
+    margin-top: 20px;
+    width: 150px;
+    height: 80px;
+}
+.defin .foto img{
+    width: 100%;
+    border-radius: 25px;
+   
+}
+/*texto de los servicios*/
+.texto{
+    width: 260px;
+    height: 250px;
+    font-family: cambria;
+    text-align: justify;
+    
+}
+
+/*DOCTORES*/
+.doctores{
+   
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 3px rgb(24, 24, 24);
+   
+    text-align: center;
+    padding: 10px;
+    
+}
+.doc{
+    width: 250px;
+    height: 300px;
+    transition: 1s;
+    border-radius: 53px;
+    background-color: rgb(255, 255, 255);
+
+}
+.doc .foto{
+    width: 100%;
+    height: 190px;
+    border-radius: 50px 50px 0px 0px;
+    margin-bottom: 10px;
+    background-color: rgb(18, 111, 27);
+}
+.doc .foto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px 50px 0px 0px;
+}
+.doc:hover{
+        background-color: rgba(43, 205, 226, 0.667);
+        transform: scale(1.05);
+        cursor: pointer;
+        .nom span{
+            color: rgb(144, 52, 52);
+        }
+        .nom p, .iconos i {
+            color: rgb(1, 1, 1);
+        }
+}
+.doc .nom p{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-family: cambria;
+    font-size: 18px;
+}
+.doc .nom span{
+    font-weight: bold;
+    color: orangered;
+    font-family: cambria;
+    font-size: 18px;
+}
+.doc .iconos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color:rgb(67, 42, 42);
+    gap: 20px;
+}
+
+/*HORARIO Y NOTA*/
+.dere{
+    text-align: center;
+   
+    background-color: rgba(76, 43, 226, 0.667);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgb(32, 30, 30);
+    
+}
+.horario h1{
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: cambria;
+    color: rgb(255, 255, 255); 
+}
+.horario p{
+    font-size: 25px;
+    font-family: cambria;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: rgba(1, 1, 1, 0.719);
+}
+#not{
+    background-color: brown;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: cambria;
+    
+}
+
+/*FOOTER*/
+.footer{
+    height: auto;
+    
+}
+.cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(15, 113, 149);
+}
+.cont .icon{
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.cont .icon a, i{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    text-shadow: 1px 0px 0px rgba(125, 118, 118, 0.95);
+}
+.txt p{
+    font-size: 18px;
+    font-family: calibri;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+}
+.txt span{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    
+}
+
+

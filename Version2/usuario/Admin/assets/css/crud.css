@@ -1,0 +1,139 @@
+.crud-container {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.crud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-add {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.crud-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.crud-table th,
+.crud-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.crud-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-edit {
+    background: #4caf50;
+}
+
+.btn-delete {
+    background: #f44336;
+}
+
+.crud-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.btn-save,
+.btn-cancel {
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-save {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.btn-cancel {
+    background: #f44336;
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.pagination a.active,
+.pagination a:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+} 
