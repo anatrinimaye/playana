@@ -2,6 +2,7 @@
 @import url(./all.min.css);
 @import url(./all.min.css);
 @import url(./bootstrap.min.css);
+@import url(./sweetalert2.css);
 
 /* HEADER */
 
@@ -34,7 +35,7 @@
 
 /* Barra de navegacion */
 .header{
-    /* background-color: #710a0a; */
+    /* background-color: #ffffff; */
     height: 50px;
     color: black;
     font-family: cambria;
@@ -107,43 +108,31 @@
         font-size: 23px;
     }
 }
-body.oscuro{
-    background-color: rgb(0, 0, 0);
-    color: white;
-
-    .header, .serv{
-        color: white;
-    
-    }
-    
-
-    .buscar{
-        i{
-            color: rgb(0, 0, 0);
-        }
-    }
-    i{
-        color: white;
-    }
-    
-}
 
 
-.btnMenu, .offcanvas{
+
+.btnMenu{
     display: none;
+    background-color: #880000;
 }
 
 @media(min-width: 0px) and (max-width: 1068px) {
+    .enlaces{
+        display: none;
+    }
+
     .btnMenu, .offcanvas{
         display: block;
         background-color: var(--color1);
-        color: white;
+        color: rgb(0, 0, 0);
         
     }
+    
     .cajaContactos{
         .contactos{
             gap: 30px;
             span{
+                background-color: #fff;
                 display: none;
                 
             }

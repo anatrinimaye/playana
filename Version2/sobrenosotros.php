@@ -16,7 +16,6 @@
           require ("./componentes/header.php");
       ?>
   </div>
-   
 
         <!-- ************************ CUERPO -->
         <!-- BANNER -->

@@ -1,0 +1,19 @@
+
+
+/* NUEVA CITA */
+.cajaSolicitar{
+    font-family: cambria;
+    justify-content: center;
+    align-items: center;
+    .SolicitarCita{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        .solictud{
+            /* width: 800px; */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+    }
+}

@@ -33,11 +33,7 @@
                         <div class="foto">
                             <img src="./img/ofta5.jpeg" style="width: 250px" class="card-img-top" alt="...">
                         </div>
-                        
                     </div>
-            
-            
-   
         </div>
 
         
