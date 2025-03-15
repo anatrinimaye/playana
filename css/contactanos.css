@@ -1,0 +1,58 @@
+
+
+
+
+    /* banner */
+    .banner{
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.434), rgba(0, 0, 0, 0.686)),url(../img/fondo2.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 150px;
+      }
+    /* Formulario y contactos */
+    .formYcont{
+       flex-wrap: wrap;
+        font-family: cambria;
+        justify-content: space-between;
+        .formul{
+            width: 900px;
+            form{
+                .inpts{
+                    input{
+                        border: 1px solid rgba(2, 2, 2, 0.426);
+                        border-radius: 0px;
+                    }
+                    
+                }
+                textarea{
+                    height: 150px;
+                    resize: none;
+                    border: 1px solid rgba(2, 2, 2, 0.426);
+                        border-radius: 0px;
+                }
+            }
+        }
+        .contactos{
+            background-color: #013f6baf;
+            box-shadow: 2px 2px 3px rgb(0, 0, 0);
+            /* border-radius: 15px; */
+            color: black;
+            height: auto;
+            width: 330px;
+            .contacto{
+                .cadaCont{
+                    border-radius: 15px;
+                    background-color: #3730309c;
+                }
+            }
+            .redes{
+                justify-content: space-around;
+                i{
+                    font-size: 20px;
+                    color: black;
+                }
+            }
+        }
+    }

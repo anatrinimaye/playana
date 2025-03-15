@@ -1,0 +1,10 @@
+
+/* BANNER DE LAS INTERFACES */
+.banner{
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.434), rgba(0, 0, 0, 0.686)),url(../img/fondo2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+}

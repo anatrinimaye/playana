@@ -1,0 +1,82 @@
+
+/* BANNER */
+.banner{
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.434), rgba(0, 0, 0, 0.686)),url(../img/fondo2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+  }
+
+
+
+/* CITA ANTIGUO PACIENTE */
+.cajaSolicitarAnt{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: center;
+    gap: 200px;
+    flex-wrap: wrap;
+    align-items: center;
+    /* Formulario */
+    .formAnt{
+        box-shadow: 1px 2px 3px black;
+        input,select,textarea{
+            border: 1px solid rgba(128, 128, 128, 0.508);
+            border-radius: 0px;
+        }
+    }
+  
+}
+  /* Horario */
+  .horarioYaviso{
+    .hora{
+        background-color: #013f6baf;
+        box-shadow: 2px 2px 3px rgb(0, 0, 0);
+        .h5{
+            font-weight: bold;
+        }
+        
+    }
+    .aviso{
+        .not{
+            color: #ff0202;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        /* color: white; */
+        .solo1{
+          color: black;
+           font-size: 15px;
+           font-weight: bold;
+           text-align: start;
+        }
+    }
+
+  }
+
+
+
+
+/*CITA NUEVO PACIENTE */
+.cajaSolicitarNew{
+    font-family: cambria;
+    justify-content: space-between;
+    align-items: center;
+    .SolicitarCitaNew{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 2px 3px black;
+        .solictud{
+            /* width: 800px; */
+            justify-content: space-between;
+            align-items: center;
+        }
+        input,select,textarea{
+            border: 1px solid rgba(128, 128, 128, 0.508);
+            border-radius: 0px;
+        }
+
+    }
+}
