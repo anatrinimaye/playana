@@ -8,3 +8,15 @@
   background-repeat: no-repeat;
   height: 150px;
 }
+
+/* CAJA DE LOS SERVICIOS */
+.cajaServicios{
+
+  /* Cada servicio */
+  .cadaServ{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+  }
+}

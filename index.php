@@ -23,17 +23,18 @@
             <div class="eslogan">
                 <h2>La salud no lo es todo pero sin ella, todo lo demas es nada</h2>
             </div>
-                    <div class="mt-5 d-flex container" >
-                        <div class="foto">
-                            <img src="./img/ofta1.jpg" style="width: 250px" class="card-img-top" alt="...">
-                        </div>
-                        <div class="foto">
-                            <img src="./img/ofta4.jpg" style="width: 250px" class="card-img-top" alt="...">
-                        </div>
-                        <div class="foto">
-                            <img src="./img/ofta5.jpeg" style="width: 250px" class="card-img-top" alt="...">
-                        </div>
-                    </div>
+            <!-- Tarjetas -->
+            <div class="mt-5 d-flex container tarjetas" >
+                <div class="foto">
+                    <img src="./img/ofta1.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="foto">
+                    <img src="./img/ofta4.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="foto">
+                    <img src="./img/ofta5.jpeg" class="card-img-top" alt="...">
+                </div>
+            </div>
         </div>
 
         
@@ -43,9 +44,9 @@
             <!-- Horario de Emergencia -->
             <div class="horario d-flex container-fluid mt-5">
                 <!-- Caja del Horario y de Emergencia  -->
-                <div class=" d-flex horari col-8 py-5 px-2">
+                <div class=" d-flex horari col-lg-8 col-12">
                     <!-- Horario -->
-                    <div class=" col-6 px-5 hora">
+                    <div class="col-lg-6 col-12 hora">
                         <div class="container">
                             <p class="h3 text-center ">Horario de apertura</p> 
                         </div> <hr class="text-light">
@@ -53,12 +54,14 @@
                             <div>
                                 <p>Lunes - Viernes: &nbsp <span>7:00 - 23:00 h</span>  </p>
                                 <p>Sábado - Domingo: &nbsp <span>9:00 - 18:00h</span> </p>
-                                <p class="h4 text-center festi"> Dia Festivo (Cierre de la clinica) <hr> <span class="text-light "> 8 Diciembre</span> </p>
+                                <p class="h5 mt-4 text-center festi">  Dia Festivo (Cierre de la clinica)</p> 
+                                <hr class="text-light">
+                                <p class="text-center"> 8 Diciembre</p>
                             </div>
                         </div>
                     </div>
                     <!-- Emergencia -->
-                    <div class=" col-5 px-5">
+                    <div class="col-lg-5 col-12 ">
                         <div class="container">
                             <p class="h3 text-center">Casos de emergencia</p> 
                         </div> <hr class="text-light">
