@@ -1,8 +1,10 @@
 
+
+<link rel="stylesheet" href="../css/estilos.css">
     <!-- FOOTER -->
-     <p class="enunciados mt-5">Localizacion </p>
+        <p class="enunciados mt-5">Localizacion </p>
         <div class="container-fluid text-center mt-5">
-            <iframe class="col-lg-12 col-md-10" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8137.94762809656!2d10.815654685774211!3d1.588205474938915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10876f87668eae3b%3A0xd22214566ae82f52!2sINSTTIC!5e0!3m2!1ses!2s!4v1739104827868!5m2!1ses!2s" 
+            <iframe class="col-lg-12 col-md-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8137.94762809656!2d10.815654685774211!3d1.588205474938915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10876f87668eae3b%3A0xd22214566ae82f52!2sINSTTIC!5e0!3m2!1ses!2s!4v1739104827868!5m2!1ses!2s" 
                 
                 height="370" 
                 style="border:0;" 

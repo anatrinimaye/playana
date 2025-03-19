@@ -50,24 +50,25 @@
 
             <!-- Formulario -->
         <div class="col-lg-5 formAnt px-5 py-5">
-            <form action="">
-                    <div class=" ">
-                        <input class="form-control" type="text" placeholder="Codigo Paciente">
-                        <select class="form-control mt-4" name="" id="">
-                            <option >Servicio que necesita</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
+            <form action="./correo.php" method="POST">
+                    <div class="">
+                        <input class="form-control" type="text" placeholder="Codigo Paciente" name="cod" required>
+                        <select class="form-control mt-4" name="servicio" required>
+                            <option value="disabled selected">Servicio que necesita</option>
+                            <option value="">ofta</option>
+                            <option value="">denta</option>
+                            <option value="">penta</option>
                         </select>
-                        
-                        <input class="form-control mt-4" type="text" placeholder="Fecha y hora preferidas" >
-                        <select class="form-control mt-4" name="" id="">
+                        <label class="mt-4">Fecha y hora preferidas:</label>
+                        <input class="form-control " type="datetime-local" name="fecha" required>
+                        <select class="form-control mt-4" name="medico" required>
                             <option value="">Médico preferido</option>
-                            <option value=""></option>
-                            <option value=""></option>
+                            <option value="">Santos</option>
+                            <option value="">Marceluca</option>
                         </select>
-                        <textarea name="mensa" class="form-control mt-4" placeholder="Escriba aqui el motivo de su cita" style="height: 100px; resize:none" required></textarea>
-                        <input class="btn mt-4 form-control fw-bold" type="submit" value="Solicitar Cita" style="background-color: #013f6baf; font-size: 18px">
+                        <input type="email" class="form-control mt-4" placeholder="Su Correo Electronico" name="correo" required>
+                        <textarea name="motivo" class="form-control mt-4" placeholder="Escriba aqui el motivo de su cita" style="height: 100px; resize:none" required></textarea>
+                        <input name="btnEnviar" class="btn mt-4 form-control fw-bold" type="submit" value="Solicitar Cita" style="background-color: #013f6baf; font-size: 18px">
                     
                     </div>
             </form>

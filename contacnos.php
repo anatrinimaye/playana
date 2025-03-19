@@ -69,7 +69,7 @@
                     nulla eum corrupti ex cumque vero doloribus sint vitae 
                     natus beatae nihil.
                 </p>
-                <form action="./contactanos.php" method="POST" class="px-5 mt-5">
+                <form action="./coreo.php" method="POST" class="px-5 mt-5">
 
                         <!-- Asunto y correo -->
                         <div class="d-flex w-100 justify-content-center align-items-center gap-5    ">
