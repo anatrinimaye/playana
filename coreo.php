@@ -81,7 +81,7 @@ if (isset($_POST['btnEnviar'])) {
             icon: '<?php echo $icono_alerta; ?>',
             confirmButtonText: 'Aceptar'
         }).then(() => {
-            window.location.href = '../index.php';
+            window.location.href = './index.php';
         });
     </script>
 
