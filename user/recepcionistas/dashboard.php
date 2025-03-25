@@ -2,17 +2,17 @@
 include '../config/conexion.php';
 
 // Iniciar sesión si no está iniciada
-// session_start();
+//session_start();
 
 // // Verificar si el usuario está logueado y tiene un rol asignado
-// if (!isset($_SESSION['usuario_rol'])) {
+ /*if (!isset($_SESSION['usuario_rol'])) {
 //     // Si no hay rol definido, redirigir al login
-//     header('Location: login.php');
-//     exit();
-// }
+    header('Location: login.php');
+     exit();
+ }*/
 
 // Obtener el rol del usuario desde la sesión
-// $usuario_rol = $_SESSION['usuario_rol'];
+//$//usuario_rol = $_SESSION['usuario_rol'];
 
 // Obtener total de pacientes
 $query_pacientes = "SELECT COUNT(*) as total FROM pacientes WHERE estado = 'Activo'";
@@ -326,6 +326,16 @@ if ($usuario_rol ='recepcionista') {
                             <i class="fas fa-concierge-bell"></i> Servicios
                         </a>
                     </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../login.php">
+                        <i class="fas fa-sign-in-alt"></i> Cerrar Secion
+                        </a>
+                    </li>
+
+
+
                 </ul>
             </nav>
         </aside>
@@ -376,57 +386,7 @@ if ($usuario_rol ='recepcionista') {
                 </div>
             </div>
 
-            <!-- <div class="row mb-4">
-                <div class="col-md-4">
-                    <div class="card stats-card">
-                        <div class="card-body text-center">
-                            <i class="fas fa-calendar-check"></i>
-                            <div class="stats-number"><?php// echo $citas_hoy; ?></div>
-                            <div class="stats-label">Citas Hoy</div>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="col-md-4">
-                    <div class="card stats-card">
-                        <div class="card-body text-center">
-                            <i class="fas fa-user-plus"></i>
-                            <div class="stats-number"><?php echo $pacientes_hoy; ?></div>
-                            <div class="stats-label">Pacientes Registrados Hoy</div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Accesos Rápidos -->
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Pacientes</h5>
-                            <p class="card-text">Gestiona la información de los pacientes.</p>
-                            <a href="modules/pacientes/pacientes.php" class="btn btn-primary">Ver Pacientes</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Medicamentos</h5>
-                            <p class="card-text">Controla el stock de medicamentos.</p>
-                            <a href="modules/medicamentos/medicamentos.php" class="btn btn-primary">Ver Medicamentos</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Servicios</h5>
-                            <p class="card-text">Administra los servicios ofrecidos.</p>
-                            <a href="modules/servicios/servicios.php" class="btn btn-primary">Ver Servicios</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
 
             <!-- Gráficos -->
             <div class="row mt-4">

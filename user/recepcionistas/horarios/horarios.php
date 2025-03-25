@@ -32,7 +32,7 @@ $resultado = mysqli_query($conexion, $query);
 
         <!-- Tabla de horarios -->
         <table class="table table-hover">
-            <thead>
+            <thead class="text-center">
                 <tr>
                     <th>ID</th>
                     <th>Médico</th>
@@ -42,7 +42,7 @@ $resultado = mysqli_query($conexion, $query);
                     <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="text-center">
                 <?php if (mysqli_num_rows($resultado) > 0): ?>
                     <?php while ($horario = mysqli_fetch_assoc($resultado)): ?>
                         <tr>
@@ -53,9 +53,9 @@ $resultado = mysqli_query($conexion, $query);
                             <td><?php echo htmlspecialchars($horario['hora_fin']); ?></td>
                             <td>
                                 <!-- Botón para editar horario -->
-                                <a href="editar_horario.php?id=<?php echo $horario['id']; ?>" class="btn btn-warning btn-sm">Editar</a>
+                                <a href="editar_horario.php?id=<?php echo $horario['id']; ?>" class="btn btn-primary btn-sm"><i class="fa-solid fa-pencil"></i></a>
                                 <!-- Botón para asignar cita -->
-                                <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#horariosModal" onclick="cargarFormulario(<?php echo $horario['id']; ?>)">
+                                <a href="#" class="btn btn-primary btn-sm fa-solid fa-plus" data-bs-toggle="modal" data-bs-target="#horariosModal" onclick="cargarFormulario(<?php echo $horario['id']; ?>)">
                                     Asignar Cita
                                 </a>
                             </td>

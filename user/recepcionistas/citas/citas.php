@@ -51,8 +51,12 @@ $resultado = mysqli_query($conexion, $query);
             color: #000; /* Texto negro */
         }
         .estado-confirmada {
-            background-color: #a1f9a1; /* Verde claro */
-            color: #000; /* Texto negro */
+            background-color: #d4edda; /* Verde claro */
+            color: #155724; /* Texto verde oscuro */
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
         }
         .estado-cancelada {
             background-color: #f9a1a1; /* Rojo claro */
@@ -89,7 +93,7 @@ $resultado = mysqli_query($conexion, $query);
             </div>
         <?php endif; ?>
 
-        <a href="formucita.php" class="btn btn-primary mb-3">Nueva Cita</a>
+        <a href="formucita.php" class="btn btn-primary mb-3 fa-solid fa-plus">Nueva Cita</a>
 
         <div class="search-box mb-3">
             <input type="text" class="form-control" id="searchInput" placeholder="Buscar cita...">
@@ -133,11 +137,13 @@ $resultado = mysqli_query($conexion, $query);
                         <td><?php echo htmlspecialchars($cita['medico_nombre']); ?></td>
                         <td><?php echo htmlspecialchars($cita['fecha']); ?></td>
                         <td><?php echo htmlspecialchars($cita['hora']); ?></td>
-                        <td class="<?php echo $claseEstado; ?>"><?php echo htmlspecialchars($cita['estado']); ?></td>
+                        <td class="<?php echo $cita['estado'] === 'Confirmada' ? 'estado-confirmada' : ''; ?>">
+                            <?php echo htmlspecialchars($cita['estado']); ?>
+                        </td>
                         <td>
-                            <a href="detalle_cita.php?id=<?php echo $cita['id']; ?>" class="btn btn-info">Ver</a>
+                            <a href="detalle_cita.php?id=<?php echo $cita['id']; ?>" class="btn btn-primary bi bi-pencil"></a>
                             <a href="?eliminar=<?php echo $cita['id']; ?>" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar esta cita?');">
-                            <i class="bi bi-trash"></i>
+                            <i class="fa-solid fa-trash"></i>
                             </a>
                         </td>
                     </tr>

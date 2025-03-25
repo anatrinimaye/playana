@@ -40,21 +40,21 @@ $resultado = mysqli_query($conexion, $query);
 <body>
     <div class="container">
         <h2>Lista de Pacientes</h2>
-        <a href="formupaciente.php" class="btn btn-primary mb-3">Nuevo Paciente</a>
+        <a href="formupaciente.php" class="fa-solid fa-plus btn btn-primary mb-3">Nuevo Paciente</a>
 
         <div class="search-box mb-3">
             <input type="text" class="form-control" id="searchInput" placeholder="Buscar paciente...">
         </div>
 
-        <table class="table table-hover">
+        <table class="table table-hover text-center">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <!-- <th>ID</th> -->
                     <th>Nomb</th>
                     <th>Apelld</th>
-                    <th>DNI</th>
+                    <!-- <th>DNI</th> -->
                     <th>F.Nacmto</th>
-                    <th>Género</th>
+                    <!-- <th>Género</th> -->
                     <th>Tel</th>
                     <th>Email</th>
                     <th>Direc</th>
@@ -66,14 +66,11 @@ $resultado = mysqli_query($conexion, $query);
                 <?php if (mysqli_num_rows($resultado) > 0): ?>
                     <?php while ($paciente = mysqli_fetch_assoc($resultado)): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($paciente['id']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['nombre']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['apellidos']); ?></td>
-                            <td><?php echo htmlspecialchars($paciente['dni']); ?></td>
                             <td  style="max-width: 60px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
                                 <?php echo htmlspecialchars($paciente['fecha_nacimiento']); ?>
                             </td>
-                            <td><?php echo htmlspecialchars($paciente['genero']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['telefono']); ?></td>
                             <td  style="max-width: 150px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
                                 <?php echo htmlspecialchars($paciente['email']); ?>
@@ -81,14 +78,14 @@ $resultado = mysqli_query($conexion, $query);
                             <td><?php echo htmlspecialchars($paciente['direccion']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['estado']); ?></td>
                             <td>
-                                <a href="ver_paciente.php?id=<?php echo $paciente['id']; ?>" class="btn btn-info">
+                                <a href="ver_paciente.php?id=<?php echo $paciente['id']; ?>" class="btn btn-warning">
                                     <i class="bi bi-eye"></i>
                                 </a>
-                                <a href="formupaciente.php?id=<?php echo $paciente['id']; ?>" class="btn btn-warning">
+                                <a href="formupaciente.php?id=<?php echo $paciente['id']; ?>" class="btn btn-primary">
                                     <i class="bi bi-pencil"></i>
                                 </a>
                                 <a href="?eliminar=<?php echo $paciente['id']; ?>" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este paciente?');">
-                                    <i class="bi bi-trash"></i>
+                                    <i class="fa-solid fa-trash"></i>
                                 </a>
                             </td>
                         </tr>

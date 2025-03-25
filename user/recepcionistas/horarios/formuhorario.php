@@ -49,6 +49,36 @@ $horario = mysqli_fetch_assoc($resultado);
     </form>
 </div>
 
+<div class="modal" id="asignarCitaModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Asignar Cita</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="POST" action="asigna_citar.php">
+                <div class="modal-body">
+                    <input type="hidden" name="cita_id" value="<?php echo isset($cita['id']) ? $cita['id'] : ''; ?>"> <!-- ID de la cita pendiente -->
+                    <select name="horario_id" required>
+                        <?php foreach ($horarios as $horario): ?>
+                            <option value="<?php echo $horario['id']; ?>">
+                                <?php echo $horario['medico_nombre'] . ' - ' . $horario['dia_semana'] . ' - ' . $horario['hora_inicio']; ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Asignar Cita</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Asignar Cita</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <script>
     document.getElementById('fecha').addEventListener('change', function() {
         const medicoId = document.getElementById('medico').value;

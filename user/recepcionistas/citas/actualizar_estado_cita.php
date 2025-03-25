@@ -53,3 +53,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conexion->close();
 }
 ?>
+<?php
+$to = "destinatario@example.com";
+$subject = "Prueba de correo";
+$message = "Este es un correo de prueba enviado desde PHP.";
+$headers = "From: placidopabloondo@gmail.com";
+
+if (mail($to, $subject, $message, $headers)) {
+    echo "Correo enviado correctamente.";
+} else {
+    echo "Error al enviar el correo.";
+}
+?>

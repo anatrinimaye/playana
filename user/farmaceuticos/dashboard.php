@@ -325,6 +325,13 @@ if ($usuario_rol === 'farmaceutico') {
                     </li>
 
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../login.php">
+                        <i class="fas fa-sign-in-alt"></i> Cerrar Secion
+                        </a>
+                    </li>
+
+
 
 <!-- <li class="nav-item">
     <a class="nav-link" href="./recetas/listar_recetas.php">

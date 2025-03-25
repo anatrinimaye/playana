@@ -69,7 +69,7 @@ while ($row = mysqli_fetch_assoc($result_grafico_pacientes)) {
 }
 
 $contenido_rol = '';
-if ($usuario_rol ='') {
+if ($usuario_rol ='medico') {
     $contenido_rol = '
     <div class="quick-actions">
         <h3>Acciones Rápidas</h3>
@@ -332,6 +332,13 @@ if ($usuario_rol = '') {
                     </li>
 
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../login.php">
+                        <i class="fas fa-sign-in-alt"></i> Cerrar Secion
+                        </a>
+                    </li>
+
+
                 </ul>
             </nav>
         </aside>
@@ -382,36 +389,7 @@ if ($usuario_rol = '') {
                 </div>
             </div>
 
-            <!-- Accesos Rápidos -->
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Pacientes</h5>
-                            <p class="card-text">Gestiona la información de los pacientes.</p>
-                            <a href="modules/pacientes/pacientes.php" class="btn btn-primary">Ver Pacientes</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Medicamentos</h5>
-                            <p class="card-text">Controla el stock de medicamentos.</p>
-                            <a href="modules/medicamentos/medicamentos.php" class="btn btn-primary">Ver Medicamentos</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Servicios</h5>
-                            <p class="card-text">Administra los servicios ofrecidos.</p>
-                            <a href="modules/servicios/servicios.php" class="btn btn-primary">Ver Servicios</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
             <!-- Gráficos -->
             <div class="row mt-4">
@@ -437,84 +415,8 @@ if ($usuario_rol = '') {
         </main>
     </div>
 
-    <!-- Agrega el script al final del body -->
-    <script src="./assets/js/dashboard.js"></script>
 
-    <!-- Modal -->
-    <div id="personalModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle">Agregar Personal</h2>
-            <form id="personalForm">
-                <input type="hidden" id="id" name="id">
-                <div class="form-group">
-                    <label for="dni">DNI:</label>
-                    <input type="text" id="dni" name="dni" required>
-                </div>
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="apellidos">Apellidos:</label>
-                    <input type="text" id="apellidos" name="apellidos" required>
-                </div>
-                <div class="form-group">
-                    <label for="especialidad_id">Especialidad:</label>
-                    <select id="especialidad_id" name="especialidad_id">
-                        <option value="">Seleccione una especialidad</option>
-                        <!-- Las especialidades se cargarán dinámicamente -->
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono:</label>
-                    <input type="text" id="telefono" name="telefono">
-                </div>
-                <div class="form-group">
-                    <label for="direccion">Dirección:</label>
-                    <input type="text" id="direccion" name="direccion">
-                </div>
-                <div class="form-group">
-                    <label for="estado">Estado:</label>
-                    <select id="estado" name="estado" required>
-                        <option value="Activo">Activo</option>
-                        <option value="Inactivo">Inactivo</option>
-                    </select>
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="btn-save">Guardar</button>
-                    <button type="button" class="btn-cancel" onclick="closeModal()">Cancelar</button>
-                </div>
-            </form>
-        </div>
-    </div>
 
-    <script>
-    function openModal(isEdit = false) {
-        const modal = document.getElementById('personalModal');
-        const form = document.getElementId('personalForm');
-        
-        if (!isEdit) {
-            document.getElementById('modalTitle').textContent = 'Nuevo Personal';
-            form.reset();
-            document.getElementById('id').value = '';
-        } else {
-            document.getElementById('modalTitle').textContent = 'Editar Personal';
-            // Cargar datos del personal a editar
-        }
-        
-        modal.style.display = 'block'; // Asegúrate de que el modal se muestre
-    }
-
-    function closeModal() {
-        document.getElementById('personalModal').style.display = 'none';
-        document.getElementById('personalForm').reset();
-    }
-    </script>
 
     <script>
         // Gráfico de citas

@@ -196,6 +196,13 @@
                     </li>
                     </li>
                 </ul>
+
+                <li class="nav-item">
+                        <a class="nav-link" href="../../../login.php">
+                        <i class="fas fa-sign-in-alt"></i> Cerrar Secion
+                        </a>
+                    </li>
+
             </nav>
         </aside>
 

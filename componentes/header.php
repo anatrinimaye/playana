@@ -1,6 +1,5 @@
 
 
-
     <div class="offcanvas offcanvas-end bg-light" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title ps-3" id="staticBackdropLabel"> 
@@ -43,7 +42,7 @@
     
         <!-- Login -->
         <div class="col-1 text-end">
-            <a href=""><i class="fa-solid fa-user text-secondary"></i></a>
+            <a href="./login.php"><i class="fa-solid fa-user text-secondary"></i></a>
         </div>
     </div>
 

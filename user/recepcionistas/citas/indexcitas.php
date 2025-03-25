@@ -164,14 +164,8 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="../Admin/modules/pacientes/pacientes.php">
+                        <a class="nav-link" href="../pacientes/indexpacientes.php">
                             <i class="fas fa-users"></i> Pacientes
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../historiales/indexhistoriales.php">
-                            <i class="fas fa-file-medical"></i> Historiales
                         </a>
                     </li>
 
@@ -182,11 +176,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="../reportes/indexreportes.php">
-                            <i class="fas fa-chart-line"></i> Reportes
-                        </a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="../servicios/indexservicios.php">
                             <i class="fas fa-concierge-bell"></i> Servicios

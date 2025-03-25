@@ -2,22 +2,22 @@
 include './config/conexion.php';
 
 // Iniciar sesión si no está iniciada
-session_start();
+// session_start();
 
-// Verificar si el usuario está logueado y tiene un rol asignado
-if (!isset($_SESSION['usuario_rol'])) {
-    header('Location: login.php');
-    exit();
-}
+// // Verificar si el usuario está logueado y tiene un rol asignado
+// if (!isset($_SESSION['usuario_rol'])) {
+//     header('Location: login.php');
+//     exit();
+// }
 
-// Verificar si el usuario tiene el rol de administrador
-if ($_SESSION['usuario_rol'] !== 'administrador') {
-    header('Location: acceso_denegado.php');
-    exit();
-}
+// // Verificar si el usuario tiene el rol de administrador
+// if ($_SESSION['usuario_rol'] !== 'administrador') {
+//     header('Location: acceso_denegado.php');
+//     exit();
+// }
 
-// Obtener el rol del usuario desde la sesión
-$usuario_rol = $_SESSION['usuario_rol'];
+// // Obtener el rol del usuario desde la sesión
+// $usuario_rol = $_SESSION['usuario_rol'];
 
 // Obtener total de pacientes
 $query_pacientes = "SELECT COUNT(*) as total FROM pacientes WHERE estado = 'Activo'";
@@ -71,7 +71,7 @@ while ($row = mysqli_fetch_assoc($result_grafico_pacientes)) {
 }
 
 $contenido_rol = '';
-if ($usuario_rol === 'administrador') {
+if ($usuario_rol = '') {
     // Mostrar acciones rápidas para recepcionista
     $contenido_rol = '
     <div class="quick-actions">
@@ -112,7 +112,7 @@ if ($usuario_rol === 'administrador') {
     ';
 }
 
-if ($usuario_rol === 'administrador') {
+if ($usuario_rol = '') {
     $contenido_rol .= '
     <div class="doctor-dashboard">
         <div class="row">
@@ -439,6 +439,13 @@ if ($usuario_rol === 'administrador') {
                             <i class="fas fa-users-cog"></i> <span class="nav-text">Usuarios</span>
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../.././login.php">
+                        <i class="fas fa-sign-in-alt"></i> Cerrar Secion
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
         </aside>
@@ -490,7 +497,7 @@ if ($usuario_rol === 'administrador') {
             </div>
 
             <!-- Accesos Rápidos -->
-            <div class="row mt-4">
+            <!-- <div class="row mt-4">
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
@@ -518,7 +525,7 @@ if ($usuario_rol === 'administrador') {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Gráficos -->
             <div class="row mt-4">
