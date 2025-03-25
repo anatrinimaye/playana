@@ -1,13 +1,13 @@
 <?php
-session_start();
+//session_start();
 include '../../config/conexion.php';
-
+/*
 // Verificar permisos
 if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_rol'] !== 'admin') {
     header('Location: ../../login.php');
     exit();
 }
-
+*/
 // Obtener datos del personal si se está editando
 $personal = null;
 if (isset($_GET['id'])) {

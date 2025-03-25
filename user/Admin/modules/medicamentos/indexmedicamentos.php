@@ -156,36 +156,56 @@
                 <ul class="nav flex-column">
 
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="../pacientes/indexpacientes.php">
-                            <i class="fas fa-file-medical"></i> pacientes
+                <li class="nav-item">
+                        <a class="nav-link" href="../../dashboard.php">
+                        <i class="fas fa-home"></i> <span class="nav-text">Inicio</span>
                         </a>
                     </li>
 
+
+                <li class="nav-item">
+                        <a class="nav-link" href="../pacientes/indexpacientes.php">
+                            <i class="fas fa-users"></i> <span class="nav-text">Pacientes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../personal/indexEspecialidades.php">
+                            <i class="fas fa-calendar-alt"></i> <span class="nav-text">Especialidades</span>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../personal/indexpersonal.php">
-                            <i class="fas fa-clock"></i> Personal
+                            <i class="fas fa-user-md"></i> <span class="nav-text">Personal</span>
                         </a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="../horarios/indexhorarios.php">
-                            <i class="fas fa-pills"></i> Horarios
+                            <i class="fas fa-clock"></i> <span class="nav-text">Horarios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../medicamentos/indexmedicamentos.php">
+                            <i class="fas fa-pills"></i> <span class="nav-text">Medicamentos</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../recetas/indexrecetas.php">
-                            <i class="fas fa-file-prescription"></i> Recetas
+                            <i class="fas fa-file-prescription"></i> <span class="nav-text">Recetas</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../reportes/indexreportes.php">
-                            <i class="fas fa-chart-line"></i> Reportes
+                            <i class="fas fa-chart-line"></i> <span class="nav-text">Reportes</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../servicios/indexservicios.php">
-                            <i class="fas fa-concierge-bell"></i> Servicios
+                            <i class="fas fa-concierge-bell"></i> <span class="nav-text">Servicios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../usuarios/indexUsuarios.php">
+                            <i class="fas fa-users-cog"></i> <span class="nav-text">Usuarios</span>
                         </a>
                     </li>
                 </ul>

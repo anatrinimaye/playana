@@ -155,46 +155,48 @@
             <nav class="menu">
                 <ul class="nav flex-column">
                 <li class="nav-item">
-                        <a class="nav-link" href="../pacientes/indexpacientes.php">
-                            <i class="fas fa-concierge-bell"></i> Pacientes
+                        <a class="nav-link" href="../../pacientes/indexpacientes.php">
+                            <i class="fas fa-users"></i> <span class="nav-text">Pacientes</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../citas/indexcitas.php">
-                            <i class="fas fa-users"></i> citas
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../historiales/indexhistoriales.php">
-                            <i class="fas fa-file-medical"></i> Historiales
+                        <a class="nav-link" href="../../personal/indexEspecialidades.php">
+                            <i class="fas fa-calendar-alt"></i> <span class="nav-text">Especialidades</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../personal/indexpersonal.php">
-                            <i class="fas fa-user-md"></i> Personal
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../horarios/indexhorarios.php">
-                            <i class="fas fa-clock"></i> Horarios
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="modules/medicamentos/medicamentos.php">
-                            <i class="fas fa-pills"></i> Medicamentos
+                        <a class="nav-link" href="../../personal/indexpersonal.php">
+                            <i class="fas fa-user-md"></i> <span class="nav-text">Personal</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="modules/recetas/recetas.php">
-                            <i class="fas fa-file-prescription"></i> Recetas
+                        <a class="nav-link" href="../../horarios/indexhorarios.php">
+                            <i class="fas fa-clock"></i> <span class="nav-text">Horarios</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../servicios/indexservicios.php">
-                            <i class="fas fa-chart-line"></i> Servicios
+                        <a class="nav-link" href="../../medicamentos/indexmedicamentos.php">
+                            <i class="fas fa-pills"></i> <span class="nav-text">Medicamentos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../recetas/indexrecetas.php">
+                            <i class="fas fa-file-prescription"></i> <span class="nav-text">Recetas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../reportes/indexreportes.php">
+                            <i class="fas fa-chart-line"></i> <span class="nav-text">Reportes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../servicios/indexservicios.php">
+                            <i class="fas fa-concierge-bell"></i> <span class="nav-text">Servicios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../usuarios/indexUsuarios.php">
+                            <i class="fas fa-users-cog"></i> <span class="nav-text">Usuarios</span>
                         </a>
                     </li>
 

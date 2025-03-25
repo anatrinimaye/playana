@@ -1,3 +1,4 @@
+-- Active: 1728292074352@@127.0.0.1@3306@clinica
 
 
 create DATABASE clinica;
@@ -80,6 +81,12 @@ CREATE TABLE `detalles_receta` (
 --
 -- Estructura de tabla para la tabla `especialidades`
 --
+
+
+
+/*servicios*/
+
+
 
 CREATE TABLE `especialidades` (
   `id` int(11) NOT NULL,
@@ -446,13 +453,18 @@ CREATE TABLE `sala_espera` (
 -- Estructura de tabla para la tabla `servicios`
 --
 
-CREATE TABLE `servicios` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
-  `descripcion` text DEFAULT NULL,
-  `duracion` int(11) DEFAULT NULL COMMENT 'Duración en minutos',
-  `precio` decimal(10,2) DEFAULT NULL,
-  `estado` enum('Activo','Inactivo') DEFAULT 'Activo'
+use clinica;
+DROP Table servicios;
+
+CREATE TABLE servicios (
+  id int(11) NOT NULL,
+  nombre varchar(100) NOT NULL,
+  imagen VARCHAR(255) NOT NULL,
+  enlace VARCHAR(255) not NULL,
+  descripcion text not NULL,
+  duracion int(11) NOT NULL COMMENT 'Duración en minutos',
+  precio decimal(10,2) not NULL,
+  estado enum('Activo','Inactivo') DEFAULT 'Activo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --

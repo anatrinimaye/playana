@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,63 +82,43 @@
          <p class="mt-5 enunciados"> Nuestros Servicios</p>
             <p class="text-center mb-5"> Ofrecemos amplios procedimientos médicos a pacientes entrantes y salientes.</p>
 
+            <?php
+            include "./user/config/conexion.php"; // Asegúrate de que la ruta sea correcta
+
+            // Consulta para obtener los servicios
+            $query = "SELECT * FROM servicios";
+            $resultado = mysqli_query($conexion, $query);
+
+            // Inicializar la variable $servicios
+            $servicios = [];
+            if ($resultado && mysqli_num_rows($resultado) > 0) {
+                $servicios = mysqli_fetch_all($resultado, MYSQLI_ASSOC); // Obtener todas las filas como un array asociativo
+            } else {
+                echo "<p>No se encontraron servicios en la base de datos.</p>";
+            }
+            ?>
+
             <!-- SERVICIOS -->
-             <div class="container-fluid cajaServicios ">
+            <div class="container-fluid cajaServicios">
                 <div class="container d-flex servicios">
-                    
-                    <!-- Cada Caja -->
-                    <div class=" servicio">
-                        <div class="foto">
-                            <img src="./img/ofta5.jpeg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="">
-                            <h6 class="text-center">Tratamientos de enfermedades oculares</h6>
-                            <p class="titul"> 
-                                Lorem dolor sit amet sequi ducimus aliquam sequi ducimus?
-                            </p>
-                            <div class="cajaBtn d-flex">
-                                <a class="" href="">Leer Mas</a>
+                    <?php foreach ($servicios as $servicio): ?>
+                        <div class="servicio">
+                            <div class="foto">
+                                <img src="./user/Admin/uploads/<?php echo htmlspecialchars($servicio['imagen']); ?>" class="card-img-top" alt="" style="width: 200px; height: 200px; object-fit: cover;">
+                            </div>
+                            <div>
+                                <h6 class="text-center"><?php echo htmlspecialchars($servicio['nombre']); ?></h6>
+                                <p class="titul">
+                                    <?php echo htmlspecialchars($servicio['descripcion']); ?>
+                                </p>
+                                <div class="cajaBtn d-flex">
+                                    <a href="<?php echo htmlspecialchars($servicio['enlace']); ?>">Leer Más</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Cada Caja -->
-                    <div class=" servicio">
-                        <div class="foto">
-                            <img src="./img/ofta1.jpg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="">
-                            <h6 class="text-center mb-3">Examenes y Diagnosticos de la vista</h6>
-                            <p class="titul">
-                                Lorem dolor sit amet sequi ducimus aliquam sequi ducimus?
-                            </p>
-                            <div class="cajaBtn d-flex ">
-                                <a class="" href="">Leer Mas</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cada Caja -->
-                    <div class=" servicio" >
-                        <div class="foto">
-                            <img src="./img/ofta4.jpg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="">
-                            <h6 class="text-center mb-3">Correccion de Errores Refractorios</h6>
-                            <p class="titul">
-                                Lorem dolor sit amet sequi ducimus aliquam sequi ducimus sequi
-                            </p>
-                            <div class="cajaBtn d-flex">
-                                <a class="" href="">Leer Mas</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-      
-
+                    <?php endforeach; ?>
                 </div>
-             </div>
+            </div>
 
 
         <!-- TESTIMONIOS -->

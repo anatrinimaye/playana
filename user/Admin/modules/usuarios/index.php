@@ -35,15 +35,7 @@ if (!$result) {
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
-            <?php
-            $sidebar_path = '../../includes/sidebar.php';
-            if (file_exists($sidebar_path)) {
-                include $sidebar_path;
-            } else {
-                echo "<div class='alert alert-warning'>El archivo sidebar.php no se encontró.</div>";
-            }
-            ?>
+
 
             <!-- Contenido principal -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">

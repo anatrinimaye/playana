@@ -326,7 +326,7 @@ if ($usuario_rol === 'farmaceutico') {
 
 
 
-<li class="nav-item">
+<!-- <li class="nav-item">
     <a class="nav-link" href="./recetas/listar_recetas.php">
         <i class="fas fa-clock"></i> Listar Recetas
     </a>
@@ -346,7 +346,7 @@ if ($usuario_rol === 'farmaceutico') {
     <a class="nav-link" href="./recetas/listar_recetas.php">
         <i class="fas fa-clock"></i> Dispensar Receta
     </a>
-</li>
+</li> -->
                
 
 

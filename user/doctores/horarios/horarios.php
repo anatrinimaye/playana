@@ -1,17 +1,6 @@
 <?php
 include '../../config/conexion.php';
 
-// Eliminar horario si se recibe la solicitud
-/*if (isset($_GET['eliminar'])) {
-    $id = intval($_GET['eliminar']);
-    $query = "DELETE FROM horarios WHERE id = $id";
-    
-    if (mysqli_query($conexion, $query)) {
-        echo "<div class='alert alert-success'>Horario eliminado correctamente</div>";
-    } else {
-        echo "<div class='alert alert-danger'>Error al eliminar el horario: " . mysqli_error($conexion) . "</div>";
-    }
-}*/
 
 // Búsqueda de horarios
 $busqueda = isset($_GET['busqueda']) ? $_GET['busqueda'] : '';
@@ -50,7 +39,7 @@ $resultado = mysqli_query($conexion, $query);
                     <th>Día de la Semana</th>
                     <th>Hora Inicio</th>
                     <th>Hora Fin</th>
-                    <th>Acciones</th>
+                    <!-- <th>Acciones</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -63,7 +52,7 @@ $resultado = mysqli_query($conexion, $query);
                             <td><?php echo htmlspecialchars($horario['hora_inicio']); ?></td>
                             <td><?php echo htmlspecialchars($horario['hora_fin']); ?></td>
                             <td>
-                                <a href="formuhorario.php?id=<?php echo $horario['id']; ?>" class="btn btn-warning btn-sm">Editar</a>
+                                <!-- <a href="formuhorario.php?id=<?php// echo $horario['id']; ?>" class="btn btn-warning btn-sm">Editar</a> -->
                             </td>
                         </tr>
                     <?php endwhile; ?>

@@ -41,7 +41,7 @@ $resultado = mysqli_query($conexion, $query);
                     <th>Fecha de Emisión</th>
                     <th>Estado</th>
                  
-                    <th>Acciones</th>
+                    <!-- <th>Acciones</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -57,7 +57,7 @@ $resultado = mysqli_query($conexion, $query);
                     
                             <td>
                                 <!-- Botón Ver -->
-                                <a href="verreceta.php?id=<?php echo $receta['id']; ?>" class="btn btn-info btn-sm">Ver</a>
+                                <!-- <a href="verreceta.php?id=<?php// echo $receta['id']; ?>" class="btn btn-info btn-sm">Ver</a> -->
                                 
                             </td>
                         </tr>

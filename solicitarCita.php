@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +15,29 @@
         ?>
     </div>
 
-   
+    <?php
+    include "./user/config/conexion.php"; // Asegúrate de que la conexión esté configurada correctamente
+
+    // Consulta para obtener los servicios activos
+    $queryServicios = "SELECT * FROM servicios WHERE estado = 'Activo'";
+    $resultadoServicios = mysqli_query($conexion, $queryServicios);
+
+    // Consulta para obtener los médicos (tipo = 'doctor')
+    $queryMedicos = "SELECT id, nombre FROM personal WHERE tipo = 'doctor'";
+    $resultadoMedicos = mysqli_query($conexion, $queryMedicos);
+
+    // Verificar si hay resultados
+    $servicios = [];
+    if ($resultadoServicios && mysqli_num_rows($resultadoServicios) > 0) {
+        $servicios = mysqli_fetch_all($resultadoServicios, MYSQLI_ASSOC); // Obtener todas las filas como un array asociativo
+    }
+
+    $medicos = [];
+    if ($resultadoMedicos && mysqli_num_rows($resultadoMedicos) > 0) {
+        $medicos = mysqli_fetch_all($resultadoMedicos, MYSQLI_ASSOC); // Obtener todas las filas como un array asociativo
+    }
+    ?>
+
     <!-- BANNER -->
     <div class="container-fluid px-5 banner">
         <div class="container">
@@ -25,10 +46,8 @@
     </div>
 
     <div class="cajaSolicitarAnt mt-5 d-flex container p-3">
-         <!-- Horario y Aviso-->
+        <!-- Horario y Aviso-->
         <div class="col-lg-4 horarioYaviso">
-            
-
             <div class="hora px-5 py-1">
                 <p class="h5 text-center">Horario de apertura</p> <hr class="text-light">
                 <div>
@@ -40,44 +59,53 @@
                 </div>
             </div>
             <!-- Nota -->
-            <div class="aviso mt-2 py-2" >
+            <div class="aviso mt-2 py-2">
                 <p class="text-center mt-3 not"> NOTA: <br> <strong class="solo1"> Solo los pacientes de nuestra clinica pueden realizar citas</strong> </p>
                 <p> </p>
                 <p class="text-center"> Si no es paciente, le regamos que realice su primera consuta en la clinica, GRACIAS!! </p>
             </div>
         </div>
 
-
-            <!-- Formulario -->
+        <!-- Formulario -->
         <div class="col-lg-5 formAnt px-5 py-5">
-            <form action="./correo.php" method="POST">
-                    <div class="">
-                        <input class="form-control" type="text" placeholder="Codigo Paciente" name="cod" required>
-                        <select class="form-control mt-4" name="servicio" required>
-                            <option value="disabled selected">Servicio que necesita</option>
-                            <option value="">ofta</option>
-                            <option value="">denta</option>
-                            <option value="">penta</option>
-                        </select>
-                        <label class="mt-4">Fecha y hora preferidas:</label>
-                        <input class="form-control " type="datetime-local" name="fecha" required>
-                        <select class="form-control mt-4" name="medico" required>
-                            <option value="">Médico preferido</option>
-                            <option value="">Santos</option>
-                            <option value="">Marceluca</option>
-                        </select>
-                        <input type="email" class="form-control mt-4" placeholder="Su Correo Electronico" name="correo" required>
-                        <textarea name="motivo" class="form-control mt-4" placeholder="Escriba aqui el motivo de su cita" style="height: 100px; resize:none" required></textarea>
-                        <input name="btnEnviar" class="btn mt-4 form-control fw-bold" type="submit" value="Solicitar Cita" style="background-color: #013f6baf; font-size: 18px">
-                    
-                    </div>
+            <form action="./guardarCita.php" method="POST">
+                <div class="">
+                    <!-- Servicios -->
+                    <select class="form-control mt-4" name="servicio" required>
+                        <option value="" disabled selected>Servicio que necesita</option>
+                        <?php foreach ($servicios as $servicio): ?>
+                            <option value="<?php echo htmlspecialchars($servicio['nombre']); ?>">
+                                <?php echo htmlspecialchars($servicio['nombre']); ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <!-- Fecha y hora -->
+                    <label class="mt-4">Fecha y hora preferidas:</label>
+                    <input class="form-control" type="datetime-local" name="fecha" required>
+
+                    <!-- Médicos -->
+                    <select class="form-control mt-4" name="medico_id" required>
+                        <option value="" disabled selected>Médico preferido</option>
+                        <?php foreach ($medicos as $medico): ?>
+                            <option value="<?php echo htmlspecialchars($medico['id']); ?>">
+                                <?php echo htmlspecialchars($medico['nombre']); ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <!-- Correo -->
+                    <input type="email" class="form-control mt-4" placeholder="Su Correo Electrónico" name="correo" required>
+
+                    <!-- Motivo -->
+                    <textarea name="motivo" class="form-control mt-4" placeholder="Escriba aquí el motivo de su cita" style="height: 100px; resize:none" required></textarea>
+
+                    <!-- Botón de enviar -->
+                    <input name="btnEnviar" class="btn mt-4 form-control fw-bold" type="submit" value="Solicitar Cita" style="background-color: #013f6baf; font-size: 18px">
+                </div>
             </form>
         </div>
-
-      
-        
     </div>
-
 
     <!-- FOOTER -->
     <div>
@@ -86,10 +114,8 @@
         ?>
     </div>
 
-
-
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/bootstrap.bundle.min.js"></script>
- <script src="./js/sweetalert2.all.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/sweetalert2.all.js"></script>
 </body>
 </html>

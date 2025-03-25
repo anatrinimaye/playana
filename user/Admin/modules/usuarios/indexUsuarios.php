@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Panel de Administración - Clínica</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../Admin/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -169,7 +169,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../personal/indexEspecialidades.php">
+                        <a class="nav-link" href="../personal/especialidades.php">
                             <i class="fas fa-calendar-alt"></i> <span class="nav-text">Especialidades</span>
                         </a>
                     </li>
@@ -198,13 +198,11 @@
                             <i class="fas fa-chart-line"></i> <span class="nav-text">Reportes</span>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="../usuarios/indexUsuarios.php">
-                            <i class="fas fa-users-cog"></i> <span class="nav-text">Usuarios</span>
+                        <a class="nav-link" href="../servicios/indexservicios.php">
+                            <i class="fas fa-concierge-bell"></i> <span class="nav-text">Servicios</span>
                         </a>
                     </li>
-
                 </ul>
             </nav>
         </aside>
@@ -212,7 +210,7 @@
         <main class="main-content">
             <div class="welcome-section">
             <?php
-                include "servicios.php";
+                include "index.php";
             ?>
             </div>
 

@@ -43,7 +43,7 @@ $resultado = mysqli_query($conexion, $query);
                     <th>Duración (min)</th>
                     <th>Precio</th>
                     <th>Estado</th>
-                    <th>Acciones</th>
+            
                 </tr>
             </thead>
             <tbody>
@@ -52,12 +52,14 @@ $resultado = mysqli_query($conexion, $query);
                         <tr>
                             <td><?php echo htmlspecialchars($servicio['id']); ?></td>
                             <td><?php echo htmlspecialchars($servicio['nombre']); ?></td>
-                            <td><?php echo htmlspecialchars($servicio['descripcion']); ?></td>
+                            <td  style="max-width: 200px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                                <?php echo htmlspecialchars($servicio['descripcion']); ?>
+                            </td>
                             <td><?php echo htmlspecialchars($servicio['duracion']); ?></td>
                             <td><?php echo htmlspecialchars($servicio['precio']); ?></td>
                             <td><?php echo htmlspecialchars($servicio['estado']); ?></td>
                             <td>
-                                <a href="formuservicio.php?id=<?php echo $servicio['id']; ?>" class="btn btn-warning btn-sm">Editar</a>
+                                <!-- <a href="formuservicio.php?id=<?php// echo $servicio['id']; ?>" class="btn btn-warning btn-sm">Editar</a> -->
                             </td>
                         </tr>
                     <?php endwhile; ?>

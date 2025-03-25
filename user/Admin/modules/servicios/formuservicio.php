@@ -21,7 +21,7 @@ if ($id > 0) {
 <body>
     <div class="container">
         <h2><?php echo $id > 0 ? 'Editar Servicio' : 'Nuevo Servicio'; ?></h2>
-        <form action="guardarservicio.php" method="POST">
+        <form action="guardarservicio.php" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $servicio['id'] ?? ''; ?>">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
@@ -40,6 +40,14 @@ if ($id > 0) {
                 <input type="text" class="form-control" id="precio" name="precio" value="<?php echo htmlspecialchars($servicio['precio'] ?? ''); ?>" required>
             </div>
             <div class="mb-3">
+                <label for="imagen" class="form-label">Imagen</label>
+                <input type="file" class="form-control" id="imagen" name="imagen" <?php echo $id > 0 ? '' : 'required'; ?>>
+                <?php if (!empty($servicio['imagen'])): ?>
+                    <p>Imagen actual:</p>
+                    <img src="../../uploads/<?php echo htmlspecialchars($servicio['imagen']); ?>" alt="Imagen del servicio" style="width: 100px; height: auto;">
+                <?php endif; ?>
+            </div>
+            <div class="mb-3">
                 <label for="estado" class="form-label">Estado</label>
                 <select class="form-select" id="estado" name="estado" required>
                     <option value="Activo" <?php echo (isset($servicio['estado']) && $servicio['estado'] == 'Activo') ? 'selected' : ''; ?>>Activo</option>
@@ -53,4 +61,4 @@ if ($id > 0) {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>

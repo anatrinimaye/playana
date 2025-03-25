@@ -38,7 +38,7 @@ $resultado = mysqli_query($conexion, $query);
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Imagen</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
                     <th>Duración (min)</th>
@@ -51,7 +51,9 @@ $resultado = mysqli_query($conexion, $query);
                 <?php if (mysqli_num_rows($resultado) > 0): ?>
                     <?php while ($servicio = mysqli_fetch_assoc($resultado)): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($servicio['id']); ?></td>
+                            <td>
+                                <img src="../../uploads/<?php echo htmlspecialchars($servicio['imagen']); ?>" alt="Imagen del servicio" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
                             <td><?php echo htmlspecialchars($servicio['nombre']); ?></td>
                             <td style="max-width: 200px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
                                 <?php echo htmlspecialchars($servicio['descripcion']); ?>

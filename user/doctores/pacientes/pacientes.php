@@ -53,7 +53,6 @@ $resultado = mysqli_query($conexion, $query);
                     <th>Email</th>
                     <th>Dirección</th>
                     <th>Estado</th>
-                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -72,7 +71,6 @@ $resultado = mysqli_query($conexion, $query);
                             <td><?php echo htmlspecialchars($paciente['estado']); ?></td>
                             <td>
                                <!-- <a href="formupaciente.php?id=<?php/* echo $paciente['id']; */?>" class="btn btn-warning btn-sm">Editar</a>-->
-                                <a href="?eliminar=<?php echo $paciente['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Está seguro de eliminar este paciente?')"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endwhile; ?>

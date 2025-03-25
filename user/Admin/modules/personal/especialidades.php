@@ -1,13 +1,13 @@
 <?php
-session_start();
+//session_start();
 include '../../config/conexion.php';
-
+/*
 // Verificar permisos
 if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_rol'] !== 'admin') {
     header('Location: ../../login.php');
     exit();
 }
-
+*/
 // Procesar el formulario de nueva especialidad
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['nombre']) && isset($_POST['descripcion'])) {
@@ -35,6 +35,8 @@ $resultado = mysqli_query($conexion, $query);
     <title>Gestión de Especialidades</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="container mt-5">
@@ -77,7 +79,7 @@ $resultado = mysqli_query($conexion, $query);
                                 <td><?php echo htmlspecialchars($especialidad['nombre']); ?></td>
                                 <td><?php echo htmlspecialchars($especialidad['descripcion']); ?></td>
                                 <td>
-                                    <button class="btn btn-warning btn-sm" onclick="editarEspecialidad(<?php echo $especialidad['id']; ?>)">Editar</button>
+                                    <button class="btn btn-warning btn-sm" onclick="editarEspecialidad(<?php echo $especialidad['id']; ?>)"> Editar</button>
                                     <button class="btn btn-danger btn-sm" onclick="eliminarEspecialidad(<?php echo $especialidad['id']; ?>)">Eliminar</button>
                                 </td>
                             </tr>
@@ -94,12 +96,24 @@ $resultado = mysqli_query($conexion, $query);
     }
 
     function eliminarEspecialidad(id) {
-        if (confirm('¿Está seguro de eliminar esta especialidad?')) {
-            window.location.href = `eliminar_especialidad.php?id=${id}`;
-        }
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "¡No podrás revertir esta acción!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Sí, eliminar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirigir a la página de eliminación
+                window.location.href = `eliminar_especialidad.php?id=${id}`;
+            }
+        });
     }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>
