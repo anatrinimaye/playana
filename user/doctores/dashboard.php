@@ -1,19 +1,22 @@
 <?php
+//session_start();
 include '../config/conexion.php';
-
-// Iniciar sesión si no está iniciada
-session_start();
-
-// Verificar si el usuario está logueado y tiene un rol asignado
+/*
+// Verificar si el usuario está logueado
 if (!isset($_SESSION['usuario_rol'])) {
-    // Si no hay rol definido, redirigir al login
-    header('Location: login.php');
+    header('Location: ../../../Admin/login.php'); // Redirigir al login si no está logueado
     exit();
 }
 
-// Obtener el rol del usuario desde la sesión
+// Asignar el rol del usuario desde la sesión
 $usuario_rol = $_SESSION['usuario_rol'];
 
+// Verificar si el usuario tiene el rol de doctor
+if ($usuario_rol !== 'doctor') {
+    header('Location: acceso_denegado.php'); // Redirigir si no tiene el rol adecuado
+    exit();
+}
+*/
 // Obtener total de pacientes
 $query_pacientes = "SELECT COUNT(*) as total FROM pacientes WHERE estado = 'Activo'";
 $result_pacientes = mysqli_query($conexion, $query_pacientes);
@@ -66,7 +69,7 @@ while ($row = mysqli_fetch_assoc($result_grafico_pacientes)) {
 }
 
 $contenido_rol = '';
-if ($usuario_rol === 'recepcionista') {
+if ($usuario_rol ='') {
     $contenido_rol = '
     <div class="quick-actions">
         <h3>Acciones Rápidas</h3>
@@ -106,7 +109,7 @@ if ($usuario_rol === 'recepcionista') {
     ';
 }
 
-if ($usuario_rol === 'doctor') {
+if ($usuario_rol = '') {
     $contenido_rol .= '
     <div class="doctor-dashboard">
         <div class="row">
@@ -304,7 +307,7 @@ if ($usuario_rol === 'doctor') {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../doctores/historiales/historiales.php">
+                        <a class="nav-link" href="../doctores/historiales/indexhistoriales.php">
                             <i class="fas fa-file-medical"></i> Historiales
                         </a>
                     </li>
@@ -335,7 +338,7 @@ if ($usuario_rol === 'doctor') {
 
         <main class="main-content">
             <div class="welcome-section">
-                <h1>Bienvenido al Panel de Administración</h1>
+                <h1>Bienvenido al Panel de Doctores</h1>
                 <p class="text-muted">Gestiona toda la información de tu clínica desde aquí</p>
             </div>
 
@@ -493,7 +496,7 @@ if ($usuario_rol === 'doctor') {
     <script>
     function openModal(isEdit = false) {
         const modal = document.getElementById('personalModal');
-        const form = document.getElementById('personalForm');
+        const form = document.getElementId('personalForm');
         
         if (!isEdit) {
             document.getElementById('modalTitle').textContent = 'Nuevo Personal';
@@ -563,4 +566,4 @@ if ($usuario_rol === 'doctor') {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>

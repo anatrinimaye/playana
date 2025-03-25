@@ -6,9 +6,15 @@ if (isset($_GET['eliminar'])) {
     $query = "DELETE FROM citas WHERE id = $id";
     
     if (mysqli_query($conexion, $query)) {
-        echo "<div class='alert alert-success'>Cita eliminada correctamente</div>";
+        echo "<script>
+            alert('Cita eliminada correctamente.');
+            window.location.href = 'citas.php';
+        </script>";
     } else {
-        echo "<div class='alert alert-danger'>Error al eliminar la cita: " . mysqli_error($conexion) . "</div>";
+        echo "<script>
+            alert('Error al eliminar la cita: " . mysqli_error($conexion) . "');
+            window.location.href = 'citas.php';
+        </script>";
     }
 }
 
@@ -38,7 +44,25 @@ $resultado = mysqli_query($conexion, $query);
     <title>Listado de Citas</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .estado-pendiente {
+            background-color: #f9f9a1; /* Amarillo claro */
+            color: #000; /* Texto negro */
+        }
+        .estado-confirmada {
+            background-color: #a1f9a1; /* Verde claro */
+            color: #000; /* Texto negro */
+        }
+        .estado-cancelada {
+            background-color: #f9a1a1; /* Rojo claro */
+            color: #fff; /* Texto blanco */
+        }
+        .estado-completada {
+            background-color: #d1d1d1; /* Gris claro */
+            color: #000; /* Texto negro */
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
@@ -80,21 +104,48 @@ $resultado = mysqli_query($conexion, $query);
                     <th>Fecha</th>
                     <th>Hora</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <?php while ($cita = mysqli_fetch_assoc($resultado)): ?>
+                    <?php
+                    // Determinar la clase CSS según el estado
+                    $claseEstado = '';
+                    switch ($cita['estado']) {
+                        case 'pendiente':
+                            $claseEstado = 'estado-pendiente';
+                            break;
+                        case 'confirmada':
+                            $claseEstado = 'estado-confirmada';
+                            break;
+                        case 'cancelada':
+                            $claseEstado = 'estado-cancelada';
+                            break;
+                        case 'completada':
+                            $claseEstado = 'estado-completada';
+                            break;
+                    }
+                    ?>
                     <tr>
                         <td><?php echo $cita['id']; ?></td>
                         <td><?php echo htmlspecialchars($cita['paciente_nombre']); ?></td>
                         <td><?php echo htmlspecialchars($cita['medico_nombre']); ?></td>
                         <td><?php echo htmlspecialchars($cita['fecha']); ?></td>
                         <td><?php echo htmlspecialchars($cita['hora']); ?></td>
-                        <td><?php echo htmlspecialchars($cita['estado']); ?></td>
+                        <td class="<?php echo $claseEstado; ?>"><?php echo htmlspecialchars($cita['estado']); ?></td>
+                        <td>
+                            <a href="detalle_cita.php?id=<?php echo $cita['id']; ?>" class="btn btn-info">Ver</a>
+                            <a href="?eliminar=<?php echo $cita['id']; ?>" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar esta cita?');">
+                            <i class="bi bi-trash"></i>
+                            </a>
+                        </td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
         </table>
+
+    
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

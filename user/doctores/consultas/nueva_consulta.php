@@ -2,26 +2,35 @@
 session_start();
 include '../../config/conexion.php';
 
-// Verificar si el usuario está logueado y es doctor
-if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_rol'] !== 'doctor') {
-    header('Location: ../../login.php');
-    exit();
-}
-
-$doctor_id = $_SESSION['usuario_id'];
-
-// Obtener información del paciente si se proporciona ID
-$paciente = null;
+// Verificar si se proporcionó el ID del paciente
 if (isset($_GET['paciente_id'])) {
     $paciente_id = intval($_GET['paciente_id']);
     $query = "SELECT * FROM pacientes WHERE id = $paciente_id";
     $resultado = mysqli_query($conexion, $query);
+
+    if (!$resultado) {
+        die("Error en la consulta: " . mysqli_error($conexion));
+    }
+
     $paciente = mysqli_fetch_assoc($resultado);
-    
-    // Obtener historial médico
-    $query_historial = "SELECT * FROM historial_medico WHERE paciente_id = $paciente_id ORDER BY fecha DESC LIMIT 5";
-    $resultado_historial = mysqli_query($conexion, $query_historial);
+
+    if (!$paciente) {
+        die("No se encontró información del paciente con ID: $paciente_id");
+    }
+} else {
+    die("No se proporcionó un ID de paciente.");
 }
+
+// Obtener el ID del doctor desde la sesión
+$doctor_id = $_SESSION['usuario_id'] ?? null;
+
+if (!$doctor_id) {
+    die("No se encontró información del doctor. Asegúrate de haber iniciado sesión.");
+}
+
+// Obtener historial médico
+$query_historial = "SELECT * FROM historial_medico WHERE paciente_id = $paciente_id ORDER BY fecha DESC LIMIT 5";
+$resultado_historial = mysqli_query($conexion, $query_historial);
 
 // Obtener lista de medicamentos
 $query_medicamentos = "SELECT * FROM medicamentos WHERE estado = 'disponible' ORDER BY nombre";
@@ -48,7 +57,13 @@ $resultado_medicamentos = mysqli_query($conexion, $query_medicamentos);
                     <div class="card-body">
                         <form id="consultaForm" method="POST" action="guardar_consulta.php">
                             <input type="hidden" name="paciente_id" value="<?php echo $paciente['id'] ?? ''; ?>">
-                            <input type="hidden" name="doctor_id" value="<?php echo $doctor_id; ?>">
+                            <input type="hidden" name="doctor_id" value="<?php echo $doctor_id ?? ''; ?>">
+
+                            <?php
+                            if (!$paciente || !$doctor_id) {
+                                die("No se puede realizar la consulta. Faltan datos del paciente o del doctor.");
+                            }
+                            ?>
 
                             <!-- Información del Paciente -->
                             <div class="mb-3">
@@ -209,6 +224,7 @@ $resultado_medicamentos = mysqli_query($conexion, $query_medicamentos);
                         <?php else: ?>
                             <p>No hay registros previos</p>
                         <?php endif; ?>
+                        <a href="nueva_consulta.php?paciente_id=<?php echo $paciente['id']; ?>" class="btn btn-primary">Nueva Consulta</a>
                     </div>
                 </div>
             </div>
@@ -231,4 +247,4 @@ $resultado_medicamentos = mysqli_query($conexion, $query_medicamentos);
         }
     </script>
 </body>
-</html> 
+</html>

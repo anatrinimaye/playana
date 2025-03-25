@@ -2,17 +2,17 @@
 include '../config/conexion.php';
 
 // Iniciar sesión si no está iniciada
-session_start();
+// session_start();
 
-// Verificar si el usuario está logueado y tiene un rol asignado
-if (!isset($_SESSION['usuario_rol'])) {
-    // Si no hay rol definido, redirigir al login
-    header('Location: login.php');
-    exit();
-}
+// // Verificar si el usuario está logueado y tiene un rol asignado
+// if (!isset($_SESSION['usuario_rol'])) {
+//     // Si no hay rol definido, redirigir al login
+//     header('Location: login.php');
+//     exit();
+// }
 
 // Obtener el rol del usuario desde la sesión
-$usuario_rol = $_SESSION['usuario_rol'];
+// $usuario_rol = $_SESSION['usuario_rol'];
 
 // Obtener total de pacientes
 $query_pacientes = "SELECT COUNT(*) as total FROM pacientes WHERE estado = 'Activo'";
@@ -71,7 +71,7 @@ while ($row = mysqli_fetch_assoc($result_grafico_pacientes)) {
 }
 
 $contenido_rol = '';
-if ($usuario_rol === 'recepcionista') {
+if ($usuario_rol ='recepcionista') {
     $contenido_rol = '
     <div class="quick-actions">
         <h3>Acciones Rápidas</h3>
@@ -111,7 +111,7 @@ if ($usuario_rol === 'recepcionista') {
     ';
 }
 
-if ($usuario_rol === 'recepcionista') {
+if ($usuario_rol ='recepcionista') {
     $contenido_rol .= '
     <div class="doctor-dashboard">
         <div class="row">
@@ -299,6 +299,9 @@ if ($usuario_rol === 'recepcionista') {
 
             <nav class="menu">
                 <ul class="nav flex-column">
+
+
+
                     <li class="nav-item">
                         <a class="nav-link" href="./pacientes/indexpacientes.php">
                             <i class="fas fa-users"></i> Pacientes
@@ -316,13 +319,6 @@ if ($usuario_rol === 'recepcionista') {
                             <i class="fas fa-clock"></i> Horarios
                         </a>
                     </li>
-
-
-
-
-
-
-
 
 
                     <li class="nav-item">
@@ -380,17 +376,17 @@ if ($usuario_rol === 'recepcionista') {
                 </div>
             </div>
 
-            <div class="row mb-4">
+            <!-- <div class="row mb-4">
                 <div class="col-md-4">
                     <div class="card stats-card">
                         <div class="card-body text-center">
                             <i class="fas fa-calendar-check"></i>
-                            <div class="stats-number"><?php echo $citas_hoy; ?></div>
+                            <div class="stats-number"><?php// echo $citas_hoy; ?></div>
                             <div class="stats-label">Citas Hoy</div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
+                </div> -->
+                <!-- <div class="col-md-4">
                     <div class="card stats-card">
                         <div class="card-body text-center">
                             <i class="fas fa-user-plus"></i>
@@ -399,7 +395,7 @@ if ($usuario_rol === 'recepcionista') {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Accesos Rápidos -->
             <div class="row mt-4">

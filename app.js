@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    loadEspecialidades(); // Asegúrate de que esta función esté disponible
+    loadEspecialidades(); 
 });
 
 function Servicios() {

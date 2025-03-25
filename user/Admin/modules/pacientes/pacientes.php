@@ -1,18 +1,6 @@
 <?php
 include "../../config/conexion.php";
-/*
-// Eliminar paciente si se recibe la solicitud
-if (isset($_GET['eliminar'])) {
-    $id = intval($_GET['eliminar']);
-    $query = "DELETE FROM pacientes WHERE id = $id";
-    
-    if (mysqli_query($conexion, $query)) {
-        echo "<div class='alert alert-success'>Paciente eliminado correctamente</div>";
-    } else {
-        echo "<div class='alert alert-danger'>Error al eliminar el paciente: " . mysqli_error($conexion) . "</div>";
-    }
-}
-*/
+
 // Búsqueda de pacientes
 $busqueda = isset($_GET['busqueda']) ? $_GET['busqueda'] : '';
 $query = "SELECT * FROM pacientes 
@@ -53,7 +41,6 @@ $resultado = mysqli_query($conexion, $query);
                     <th>Email</th>
                     <th>Dirección</th>
                     <th>Estado</th>
-                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -71,9 +58,6 @@ $resultado = mysqli_query($conexion, $query);
                             <td><?php echo htmlspecialchars($paciente['direccion']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['estado']); ?></td>
                             <td>
-                                <!-- Botón Ver -->
-                                <a href="verpaciente.php?id=<?php echo $paciente['id']; ?>" class="btn btn-info btn-sm">Ver</a>
-                                <!-- Botón Eliminar -->
 
                             </td>
                         </tr>

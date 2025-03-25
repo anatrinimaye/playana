@@ -1,17 +1,21 @@
 <?php
-session_start();
+//session_start();
 include '../../config/conexion.php';
-
+/*
 // Verificar si el usuario está logueado y es doctor
 if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_rol'] !== 'doctor') {
     header('Location: ../../login.php');
     exit();
-}
+}*/
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obtener y sanitizar datos básicos
-    $paciente_id = intval($_POST['paciente_id']);
-    $doctor_id = intval($_POST['doctor_id']);
+    $paciente_id = intval($_POST['paciente_id'] ?? 0);
+    $doctor_id = intval($_POST['doctor_id'] ?? 0);
+
+    if ($paciente_id === 0 || $doctor_id === 0) {
+        die("Error: No se recibieron los datos del paciente o del doctor.");
+    }
     
     // Sanitizar datos de la consulta
     $presion_arterial = mysqli_real_escape_string($conexion, $_POST['presion_arterial']);
@@ -106,4 +110,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 header('Location: consultas.php');
-exit(); 
+exit();

@@ -33,7 +33,7 @@ $resultado = mysqli_query($conexion, $query);
                     <th>Precio</th>
                     <th>Stock</th>
                     <th>Estado</th>
-                    <th>Acciones</th>
+                    <!-- <th>Acciones</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -47,7 +47,7 @@ $resultado = mysqli_query($conexion, $query);
                             <td><?php echo htmlspecialchars($medicamento['stock']); ?></td>
                             <td><?php echo htmlspecialchars($medicamento['estado']); ?></td>
                             <td>
-                                <a href="vermedicamento.php?id=<?php echo $medicamento['id']; ?>" class="btn btn-info btn-sm">Ver</a>
+                                <!-- <a href="vermedicamento.php?id=<?php// echo $medicamento['id']; ?>" class="btn btn-info btn-sm">Ver</a> -->
                             </td>
                         </tr>
                     <?php endwhile; ?>

@@ -169,11 +169,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../personal/indexEspecialidades.php">
-                            <i class="fas fa-calendar-alt"></i> <span class="nav-text">Especialidades</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="../personal/indexpersonal.php">
                             <i class="fas fa-user-md"></i> <span class="nav-text">Personal</span>
                         </a>
@@ -198,13 +193,16 @@
                             <i class="fas fa-chart-line"></i> <span class="nav-text">Reportes</span>
                         </a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="../servicios/indexservicios.php">
+                            <i class="fas fa-concierge-bell"></i> <span class="nav-text">Servicios</span>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../usuarios/indexUsuarios.php">
                             <i class="fas fa-users-cog"></i> <span class="nav-text">Usuarios</span>
                         </a>
                     </li>
-
                 </ul>
             </nav>
         </aside>
@@ -212,7 +210,7 @@
         <main class="main-content">
             <div class="welcome-section">
             <?php
-                include "servicios.php";
+                include "especialidades.php";
             ?>
             </div>
 

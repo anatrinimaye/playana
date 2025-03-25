@@ -400,7 +400,7 @@ if ($usuario_rol === 'administrador') {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./modules/personal/especialidades.php">
+                        <a class="nav-link" href="./modules/personal/indexEspecialidades.php">
                             <i class="fas fa-calendar-alt"></i> <span class="nav-text">Especialidades</span>
                         </a>
                     </li>
@@ -435,7 +435,7 @@ if ($usuario_rol === 'administrador') {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Admin/modules/usuarios/index.php">
+                        <a class="nav-link" href="../Admin/modules/usuarios/indexUsuarios.php">
                             <i class="fas fa-users-cog"></i> <span class="nav-text">Usuarios</span>
                         </a>
                     </li>

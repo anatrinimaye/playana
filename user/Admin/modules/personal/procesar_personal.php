@@ -1,13 +1,13 @@
 <?php
-session_start();
+//session_start();
 include '../../config/conexion.php';
-
+/*
 // Verificar permisos
 if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_rol'] !== 'admin') {
     header('Location: ../../login.php');
     exit();
 }
-
+*/
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obtener y sanitizar datos básicos
     $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);

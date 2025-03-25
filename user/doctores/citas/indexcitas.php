@@ -155,23 +155,45 @@
             <nav class="menu">
                 <ul class="nav flex-column">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="../pacientes/indexpacientes.php">
-                            <i class="fas fa-user-md"></i> Pacientes
+
+
+                <li class="nav-item">
+                        <a class="nav-link" href="../dashboard.php">
+                        <i class="fas fa-home"></i> <span class="nav-text">Inicio</span>
                         </a>
                     </li>
+
+
+                <li class="nav-item">
+                        <a class="nav-link" href="../pacientes/indexpacientes.php">
+                            <i class="fas fa-users"></i> Pacientes
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../historiales/historiales.php">
+                            <i class="fas fa-file-medical"></i> Historiales
+                        </a>
+                    </li>
+
 
                     <li class="nav-item">
                         <a class="nav-link" href="../horarios/indexhorarios.php">
                             <i class="fas fa-clock"></i> Horarios
                         </a>
                     </li>
-
-
+                   
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="../recetas/indexrecetas.php">
+                            <i class="fas fa-file-prescription"></i> Recetas
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../servicios/indexservicios.php">
-                            <i class="fas fa-concierge-bell"></i> Servicios
+                            <i class="fas fa-file-prescription"></i> Servicios
                         </a>
+                    </li>
                     </li>
                 </ul>
             </nav>
