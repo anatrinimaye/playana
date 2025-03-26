@@ -1,3 +1,4 @@
+-- Active: 1728286642113@@127.0.0.1@3306@clinica
 DROP DATABASE clinica;
 
 
@@ -42,8 +43,8 @@ CREATE TABLE personal (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE citas;
-use clinica;
+
+
 -- Tabla: citas
 CREATE TABLE citas (
   id INT(11) NOT NULL AUTO_INCREMENT,
