@@ -1,12 +1,12 @@
 <?php
-session_start();
+// session_start();
 include '../../config/conexion.php';
 
-// Verificar si el usuario está logueado y es farmacéutico
-if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_rol'] !== 'farmaceutico') {
-    header('Location: ../../login.php');
-    exit();
-}
+// // Verificar si el usuario está logueado y es farmacéutico
+// if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_rol'] !== 'farmaceutico') {
+//     header('Location: ../../login.php');
+//     exit();
+// }
 
 // Procesar formulario de nuevo medicamento
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

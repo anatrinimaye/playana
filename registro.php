@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
                     <div class="input-group">
-                        <span class="input-group-text"><i class="fa fa-id-card"></i></span>
+                        <span class="input-group-text"><i class="fa fa-id-"></i></span>
                         <input type="text" class="form-control" name="nombre" required>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <!-- Botón de envío -->
                 <button type="submit" class="btn btn-primary w-100">
-                    <i class="fa fa-user-plus"></i> Crear Cuenta
+                    <i class="fa fa-user-plus"></i> Crear 
                 </button>
             </form>
 

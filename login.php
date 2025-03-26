@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }elseif ($_SESSION['rol'] === 'administrador'){
                 header("Location: ./user/Admin/dashboard.php");
             }elseif ($_SESSION['rol'] === 'farmaceutico'){
-                header ("./user/farmaceuticos/dashboard.php");
+                header ("location: ./user/farmaceuticos/dashboard.php");
             }
 
 
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         body {
             margin: 0;
             height: 100vh;
-            background: linear-gradient(45deg,rgb(26, 232, 198),rgb(15, 216, 75),rgb(15, 39, 8));
+            background: linear-gradient(45deg,rgb(8, 8, 8),rgb(8, 8, 8),rgb(8, 8, 8));
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
             display: flex;
@@ -119,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .login-header p {
-            color: #666;
+            color:
             font-size: 0.9em;
         }
 
@@ -147,13 +147,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             left: 15px;
             top: 50%;
             transform: translateY(-50%);
-            color: #1a73e8;
+            color:rgb(38, 39, 39);
             font-size: 1.2em;
             transition: all 0.3s ease;
         }
 
         .form-control:focus + .input-icon {
-            color: #1a73e8;
+            color:rgb(22, 26, 31);
             transform: translateY(-50%) scale(1.1);
         }
 
@@ -163,7 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             font-size: 16px;
             font-weight: 600;
             color: white;
-            background: linear-gradient(45deg, #1a73e8, #02b3e4);
+            background: linear-gradient(45deg,rgb(24, 25, 26), #02b3e4);
             border: none;
             border-radius: 10px;
             cursor: pointer;
@@ -228,8 +228,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="login-container">
         <div class="login-header">
-            <i class="fas fa-user-md"></i>
-            <h2>Bienvenido</h2>
+            <i class=""></i>
+            <h2>login</h2>
             <p>Ingresa a tu cuenta para continuar</p>
         </div>
 

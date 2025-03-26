@@ -19,7 +19,7 @@ $query = "SELECT r.*,
           FROM recetas r
           LEFT JOIN medicamentos m ON r.medicamento_id = m.id
           LEFT JOIN pacientes p ON r.paciente_id = p.id
-          LEFT JOIN usuarios d ON r.medico_id = d.id
+          LEFT JOIN usuario d ON r.medico_id = d.id
           WHERE r.id = $id";
 
 $resultado = mysqli_query($conexion, $query);

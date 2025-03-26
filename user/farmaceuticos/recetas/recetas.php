@@ -34,7 +34,7 @@ $resultado = mysqli_query($conexion, $query);
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <!-- <th>ID</th> -->
                     <th>Paciente</th>
                     <th>Médico</th>
                     <th>Medicamento</th>
@@ -51,7 +51,7 @@ $resultado = mysqli_query($conexion, $query);
                 <?php if (mysqli_num_rows($resultado) > 0): ?>
                     <?php while ($receta = mysqli_fetch_assoc($resultado)): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($receta['id']); ?></td>
+                            <!-- <td><?php// echo htmlspecialchars($receta['id']); ?></td> -->
                             <td><?php echo htmlspecialchars($receta['paciente_nombre']); ?></td>
                             <td><?php echo htmlspecialchars($receta['medico_nombre']); ?></td>
                             <td><?php echo htmlspecialchars($receta['medicamento_id']); ?></td>

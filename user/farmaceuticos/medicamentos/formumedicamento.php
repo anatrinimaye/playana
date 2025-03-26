@@ -21,7 +21,7 @@ if ($id > 0) {
 <body>
     <div class="container mt-5">
         <h2><?php echo $id > 0 ? 'Editar Medicamento' : 'Nuevo Medicamento'; ?></h2>
-        <form method="POST" action="formumedicamento.php">
+        <form action="guardarmedicamento.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>

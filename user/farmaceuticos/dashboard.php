@@ -2,17 +2,17 @@
 include '../config/conexion.php';
 
 // Iniciar sesión si no está iniciada
-session_start();
+ session_start();
 
-// Verificar si el usuario está logueado y tiene un rol asignado
-if (!isset($_SESSION['usuario_rol'])) {
-    // Si no hay rol definido, redirigir al login
-    header('Location: login.php');
+// // Verificar si el usuario está logueado y tiene un rol asignado
+ if (!isset($_SESSION['usuario_rol'])) {
+//     // Si no hay rol definido, redirigir al login
+     header('Location: login.php');
     exit();
-}
+ }
 
-// Obtener el rol del usuario desde la sesión
-$usuario_rol = $_SESSION['usuario_rol'];
+// // Obtener el rol del usuario desde la sesión
+ $usuario_rol = $_SESSION['usuario_rol'];
 
 // Obtener total de pacientes
 $query_pacientes = "SELECT COUNT(*) as total FROM pacientes WHERE estado = 'Activo'";
@@ -75,7 +75,7 @@ if ($result_receta && mysqli_num_rows($result_receta) > 0) {
 }
 
 $contenido_rol = '';
-if ($usuario_rol === 'farmaceutico') {
+if ($usuario_rol = '') {
     $contenido_rol = '
     <div class="quick-actions">
         <h3>Acciones Rápidas</h3>
@@ -115,7 +115,7 @@ if ($usuario_rol === 'farmaceutico') {
     ';
 }
 
-if ($usuario_rol === 'farmaceutico') {
+if ($usuario_rol = '') {
     $contenido_rol .= '
     <div class="doctor-dashboard">
         <div class="row">
@@ -331,29 +331,6 @@ if ($usuario_rol === 'farmaceutico') {
                         </a>
                     </li>
 
-
-
-<!-- <li class="nav-item">
-    <a class="nav-link" href="./recetas/listar_recetas.php">
-        <i class="fas fa-clock"></i> Listar Recetas
-    </a>
-</li>
-<li class="nav-item">
-    <?php if ($receta): ?>
-        <a class="nav-link" href="./recetas/dispensar_receta.php?id=<?php echo $receta['id']; ?>">
-            <i class="fas fa-clock"></i> Dispensar Receta
-        </a>
-    <?php else: ?>
-        <a class="nav-link disabled" href="#">
-            <i class="fas fa-clock"></i> No hay recetas activas
-        </a>
-    <?php endif; ?>
-</li>
-<li class="nav-item">
-    <a class="nav-link" href="./recetas/listar_recetas.php">
-        <i class="fas fa-clock"></i> Dispensar Receta
-    </a>
-</li> -->
                
 
 
@@ -406,8 +383,8 @@ if ($usuario_rol === 'farmaceutico') {
                     </div>
                 </div>
             </div>
-
-            <!-- Accesos Rápidos -->
+<!-- 
+            Accesos Rápidos
             <div class="row mt-4">
                 <div class="col-md-4">
                     <div class="card">
@@ -436,7 +413,7 @@ if ($usuario_rol === 'farmaceutico') {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Gráficos -->
             <div class="row mt-4">
