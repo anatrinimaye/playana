@@ -179,23 +179,6 @@ CREATE TABLE medicamentos (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Estructura de tabla para la tabla `pacientes`
-CREATE TABLE pacientes (
-  id INT(11) NOT NULL AUTO_INCREMENT,
-  nombre VARCHAR(100) NOT NULL,
-  apellidos VARCHAR(100) NOT NULL,
-  dni VARCHAR(20) UNIQUE DEFAULT NULL,
-  fecha_nacimiento DATE DEFAULT NULL,
-  genero ENUM('M', 'F', 'Otro') DEFAULT NULL,
-  telefono VARCHAR(20) DEFAULT NULL,
-  email VARCHAR(100) DEFAULT NULL,
-  direccion TEXT DEFAULT NULL,
-  foto VARCHAR(255) DEFAULT NULL,
-  estado ENUM('Activo', 'Inactivo') DEFAULT 'Activo',
-  fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 -- Estructura de tabla para la tabla `personal`
 CREATE TABLE personal (
   id INT(11) NOT NULL AUTO_INCREMENT,
