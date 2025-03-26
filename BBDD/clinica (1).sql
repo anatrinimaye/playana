@@ -1,5 +1,5 @@
 -- Active: 1728286642113@@127.0.0.1@3306@clinica
-DROP DATABASE clinica;
+
 
 
 -- Crear la base de datos
